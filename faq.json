@@ -1,0 +1,2422 @@
+[
+  {
+    "faq_id": 1,
+    "question": "Assalomu alaykum, FastAPIda bir papka ichidagi fayldan turib, shu papka bilan bir rootda turgan boshqa papka ichidagi fayldagi funksiyani qanday chaqirsa bo'ladi? Chaqirmoqchi bo'lsam ModuleNotFoundError chiqyapti.",
+    "answer": "from ..other_folder.module import function  ishlatiladi. Loyiha papkada __init__.py bo'lishi va skriptni python -m package.module shaklida ishga tushirish kerak yoki sys.path ga qo'shish mumkin."
+  },
+  {
+    "faq_id": 2,
+    "question": "Assalomu alaykum. Python Asoslari va OOP uchun vazifalarni yuborgan edim. Tekshirib berasizmi?",
+    "answer": "Vazifani qayerga yuborganingizni aniq ayting (Telegram, platforma, link). Shunda tezda tekshirib javob beraman."
+  },
+  {
+    "faq_id": 3,
+    "question": "Assalomu alaykum, shu rasmda 1 va 2-usuldan qaysi biri yaxshiroq? Qaysi biri qo'llansa kod hamma tomondan yaxshiroq chiqadi?",
+    "answer": "Rasmni ko'rmay aniq aytish qiyin. Umumiy qoida: toza, o'qiladigan, qayta ishlatiladigan va DRY prinsipiga mos kodi yaxshi."
+  },
+  {
+    "faq_id": 4,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordam kerak edi. 1-saytdan ma'lumot olishda muammo bo'lyapti, yordam berasizmi?",
+    "answer": "Albatta. Qaysi sayt, qanday kutubxona (requests, bs4, selenium)? Xato xabari va kod qismini yuboring, aniq yordam beraman."
+  },
+  {
+    "faq_id": 5,
+    "question": "Hammaga salom! Full Stack Pythonni bitirganimdan keyin ishga kirayotganimda 'qanaqa education bor' desa nima desam bo'ladi?",
+    "answer": "«Self-taught / Mohirdev / Najot Ta'lim / One Million da Full-Stack Python kursini tugatganman, real loyihalarim bor» deyish mumkin. Asosiy portfolio va GitHub muhim."
+  },
+  {
+    "faq_id": 6,
+    "question": "Assalomu alaykum, shu rasmda 1 va 2-usuldan qaysi biri yaxshiroq? Qaysi biri qo'llansa kod hamma tomondan yaxshiroq chiqadi?",
+    "answer": "Rasm ko'rinmadi. Odatda: o'qilishi oson, kam takrorlanuvchi va funksional kod afzal."
+  },
+  {
+    "faq_id": 7,
+    "question": "Assalomu alaykum, bugun CSSni boshladim. VS Code'da Live Server o'rnatdim, ochsam Yandexda ochilyapti. Chrome ochilishi kerak edi.",
+    "answer": "VS Code → Extensions → Live Server → Settings → Custom Browser ga 'chrome' yozing yoki Chrome yo'lini to'liq ko'rsating."
+  },
+  {
+    "faq_id": 9,
+    "question": "Vazifani yukladim, tekshirib berishingizni so'rayman.",
+    "answer": "Vazifangiz 2 kun ichida tekshiriladi"
+  },
+  {
+    "faq_id": 10,
+    "question": "Assalomu alaykum, FastAPI'da docs va redoc'larga login/parol orqali kirishni qanday amalga oshirsa bo'ladi? Faqat ruxsati borlar ko'rishi uchun.",
+    "answer": "docs_url/redoc_url ni None qilib, HTTPBasic yoki JWT bilan yangi /docs va /redoc yo'llarini qo'shing. Misol: fastapi.security.HTTPBasic ishlatish eng sodda."
+  },
+  {
+    "faq_id": 11,
+    "question": "Assalomu alaykum, HTML va CSSni tugatgandan keyin amaliy loyiha berildi. Bu loyihaning asosiy sahifasini o'zim qilamanmi yoki har bir menyuni alohida qilishim kerakmi?",
+    "answer": "Asosiy sahifasini landing pageni bajarishingiz kerak"
+  },
+  {
+    "faq_id": 13,
+    "question": "Assalomu alaykum! HTML kursi loyihasini jo'natib bo'lmayapti. Qanday jo'natsam bo'ladi?",
+    "answer": "Zip qilib yuboring yoki GitHub repo qilib linkini yuboring. Fayl hajmi katta bo'lsa GitHub tavsiya etiladi."
+  },
+  {
+    "faq_id": 14,
+    "question": "Assalomu alaykum yaxshimisiz. 1-saytdan ma'lumot olishda muammo bo'lyapti, yordam berasizmi?",
+    "answer": "Xato xabari, ishlatilayotgan kod va sayt nomini yuboring, aniq yordam beraman."
+  },
+  {
+    "faq_id": 15,
+    "question": "Birinchi topshiriqni bajardim, lekin yuklab bo'lmayapti.",
+    "answer": "Fayl formatini (zip?), hajmini tekshiring. Platforma qabul qilmayotgan bo'lsa admin/mentor bilan bog'laning."
+  },
+  {
+    "faq_id": 16,
+    "question": "Assalomu alaykum, FastAPI'da docs va redoc'larga login/parol orqali kirishni qanday amalga oshirsa bo'ladi?",
+    "answer": "Default docs/redoc ni o'chirib (None qilib), HTTPBasic autentifikatsiya bilan yangi yo'llar yarating."
+  },
+  {
+    "faq_id": 17,
+    "question": "django-hitcount ni o'rnatgandan keyin shunaqa xatolik chiqyapti.",
+    "answer": "Ko'pincha versiya mos kelmasligi. django-hitcount==1.3.2 ni o'rnating yoki yangi muqobil (django-simple-hitcounter) sinab ko'ring."
+  },
+  {
+    "faq_id": 19,
+    "question": "Salom, Admin panelda static ishlamayapti, lekin mening static fayllarim ishlayapti. Whitenoise o'rnatmagan edim, shuning uchunmi?",
+    "answer": "Ha, productionda static uchun whitenoise kerak. settings.py da STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' qo'shing."
+  },
+  {
+    "faq_id": 20,
+    "question": "HTMLda topshiriqni bajarib fayl qilib yuklasam validator xatosi chiqyapti, nega?",
+    "answer": "DOCTYPE, tag yopilishi, atribut qiymatlari tekshirilsin. W3C validator xatosini yozing, aniq aytaman."
+  },
+  {
+    "faq_id": 21,
+    "question": "Single page ishlamayapti, lekin news_detail berilgan.",
+    "answer": "urls.py da path to'g'ri yozilganmi? views va template nomi mos keladimi tekshiring."
+  },
+  {
+    "faq_id": 22,
+    "question": "Assalomu alaykum. Web-saytda HTTPS protokoliga ruxsatni o'chirib, HTTPS havola bilan kirsa ham HTTPga o'tkazib yuboradigan qilish mumkinmi?",
+    "answer": "Ha, serverda (nginx/apache) redirect sozlanadi: 301 redirect from https → http. Lekin xavfsizlik uchun tavsiya etilmaydi."
+  },
+  {
+    "faq_id": 23,
+    "question": "Access to XMLHttpRequest ... CORS policy xatosi. Frontdan post qilayapman, lekin ruxsat bermayapti.",
+    "answer": "Backendda CORS sozlang: FastAPI bo'lsa CORSMiddleware qo'shing, allow_origins=['http://localhost:3000']. Django bo'lsa django-cors-headers ishlatiladi."
+  },
+  {
+    "faq_id": 25,
+    "question": "clear-fix classi ishlamayapti.",
+    "answer": "Modern CSSda clearfix o'rniga .container { overflow: hidden; } yoki flex/grid ishlatish yaxshiroq."
+  },
+  {
+    "faq_id": 27,
+    "question": "Assalomu alaykum, FastAPI'da docs va redoc'larga login/parol orqali kirishni qanday amalga oshirsa bo'ladi?",
+    "answer": "docs_url=None qilib, HTTPBasic bilan yangi /docs yo'lini yarating (yuqoridagi misollarga qarang)."
+  },
+  {
+    "faq_id": 28,
+    "question": "Rasm yo'qligi uchun shunaqa xatolik chiqyapti. Shetga nima yozsa rasm bo'lmasa ham o'tadigan qilish mumkinmi?",
+    "answer": "Frontendda optional qiling yoki backendda rasm bo'lmasa default rasm qo'ying. Masalan, forms.ImageField(blank=True, null=True)."
+  },
+  {
+    "faq_id": 30,
+    "question": "0.8rem, 1rem kichkina qilganda ishlamayapti.",
+    "answer": "root font-size (html { font-size: 16px; }) o'zgartirilgan bo'lishi mumkin. yoki browser zoom tekshiring."
+  },
+  {
+    "faq_id": 32,
+    "question": "Pythonda modullarni ulash uchun nima qilish kerak, from va import ishlamayapti.",
+    "answer": "Loyiha tuzilishi to'g'ri bo'lishi, __init__.py borligi va PYTHONPATH sozlanganligini tekshiring."
+  },
+  {
+    "faq_id": 33,
+    "question": "Menda brauzerni yuklashda muammo bo'lyapti. Bunga sabab nima?",
+    "answer": "Internet, cache, extensionlar yoki server javob bermayotgan bo'lishi mumkin. Console xatolarini tekshiring."
+  },
+  {
+    "faq_id": 34,
+    "question": "Assalomu alaykum. CSS kursi bo'yicha darslarning tekst formatini qayerdan olsam bo'ladi?",
+    "answer": "Platforma ichidagi 'Darslar' bo'limini tekshiring yoki mentor so'rang, ko'pincha PDF berilmaydi."
+  },
+  {
+    "faq_id": 35,
+    "question": "HTMLda oxirgi dars loyihasini baholash vaqti qancha davom etadi? Iloji bo'lsa tezroq ko'rib chiqish mumkinmi?",
+    "answer": "Odatda 1-2 kun. Mentorlar band bo'lsa kechikishi mumkin, sabr qiling."
+  },
+  {
+    "faq_id": 36,
+    "question": "Assalomu alaykum, FastAPI darslarini ko'ryapman. Qo'shimcha dokumentatsiya uchun resurslar tavsiya qila olasizmi?",
+    "answer": "Rasmiy: https://fastapi.tiangolo.com. Qo'shimcha: TestDriven.io, tiangolo/full-stack-fastapi-postgresql."
+  },
+  {
+    "faq_id": 37,
+    "question": "FastAPI da login qismini yozayotganimda shunaqa xatolik chiqyapti.",
+    "answer": "Xato xabarini to'liq yozing, ko'pincha dependency yoki schema bilan bog'liq."
+  },
+  {
+    "faq_id": 38,
+    "question": "Assalomu alaykum, JavaScript DOM boshlang'ich holatda. 3 ta button bosilganda tegishli html faylga o'tishi kerak. Kodni davom ettirib bering.",
+    "answer": "window.location.href = 'all.html'; kabi ishlatiladi. Har bir button uchun event listener qo'shing."
+  },
+  {
+    "faq_id": 39,
+    "question": "\"em\" bo'yicha kursni yakunladim. Container ichida font-size ga nisbatan nima uchun o'zgarmayapti?",
+    "answer": "em ota elementning font-size ga nisbatan. root em uchun html/rem ishlatish yaxshiroq."
+  },
+  {
+    "faq_id": 43,
+    "question": "Assalomu alaykum, CI/CD qilayotgan edim. Deploy qismi uchun foydali article bormi? Server password bilan qanday qilinadi?",
+    "answer": "GitHub Actions + Render/DigitalOcean. SSH key bilan deploy qilish tavsiya etiladi, password kam ishlatiladi."
+  },
+  {
+    "faq_id": 44,
+    "question": "Djangoni PyCharmda emas, VS Code'da qilsa bo'ladimi? Farqi bor? Boshlagan loyihani qanday VS Code'da davom ettiraman?",
+    "answer": "Bo'ladi, farqi katta emas. Virtualenv faollashtirib, extensions (Python, Django) o'rnating."
+  },
+  {
+    "faq_id": 45,
+    "question": "DRF kursda modellarni migrate qilsam shunaqa xato chiqyapti.",
+    "answer": "Makemigrations qilganmisiz? Xato xabarini yozing."
+  },
+  {
+    "faq_id": 47,
+    "question": "Man JS kursi topshirig'ini bajardim. Hech kim tekshirmayapti.",
+    "answer": "Mentor/gruppa adminiga eslatma yozing."
+  },
+  {
+    "faq_id": 49,
+    "question": "Assalomu alaykum, GitHub student pack olganimni qayerdan tekshirib bilsam bo'ladi? Emailga xabar kelmadi.",
+    "answer": "GitHub Education sahifasiga kiring yoki supportga murojaat qiling."
+  },
+  {
+    "faq_id": 50,
+    "question": "Order modelda total_amount field bor. Har safar save bo'lganda servicelar narxining yig'indisini avtomatik hisoblab saqlashni xohlayman. Best practice qanday?",
+    "answer": "save() metodini override qiling yoki post_save signal ishlatib hisoblang. Eng clean: def calculate_total(self): self.total_amount = sum(...) va uni save oldidan chaqiring."
+  },
+  {
+    "faq_id": 52,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "Saytdan ma'lumot olish uchun requests kutubxonasidan foydalaning: import requests; response = requests.get('url'). Agar API bo'lsa, dokumentatsiyasini tekshiring. BeautifulSoup yoki Selenium kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 53,
+    "question": "Assalomu Alaykum! for orqali modeldagi ma'lumotlarni brauzerga chiqaradigan view yozdim va htmlda for orqali ko'rsatmoqchi bo'ldim ammo ma'lumot home sahifada ko'rinmayapti",
+    "answer": "View dan context to'g'ri uzatilganini tekshiring. Template da {% for item in items %} {{ item }} {% endfor %} sintaksisi to'g'ri yozilganini va items bo'sh emasligini tekshiring. print() bilan debug qiling."
+  },
+  {
+    "faq_id": 55,
+    "question": "raqam saqlayaptiyu lekin, lekin, email saqlamasdan ushbu xatoni yuzimga uryaptida",
+    "answer": "Model validatsiyasini tekshiring. EmailField() ishlatilganini va REQUIRED fields to'g'ri belgilanganini tasdiqlang. Form validatsiyasida cleaned_data['email'] mavjudligini tekshiring."
+  },
+  {
+    "faq_id": 56,
+    "question": "manda comment chiqmayabdi, xatolik bermadi",
+    "answer": "View context da comments uzatilganini va template da {% for comment in comments %} to'g'ri yozilganini tekshiring. QuerySet bo'sh bo'lishi mumkin - shell da objects.all() tekshiring."
+  },
+  {
+    "faq_id": 57,
+    "question": "Assalomu aleykum psycopg2 install qilishda xatolik beryapti",
+    "answer": "pip install psycopg2-binary buyrug'ini ishlating. Agar Windows da bo'lsa, Visual C++ build tools kerak bo'lishi mumkin. Yoki Docker ishlatishni tavsiya qilaman."
+  },
+  {
+    "faq_id": 59,
+    "question": "ustoz djangoda mabu {% %}, {{ }} ikala qavisni nma farqi bor?",
+    "answer": "{% %} - template tags uchun (for, if, block). {{ }} - o'zgaruvchilarni chiqarish uchun. Misol: {% for item in list %} {{ item.name }} {% endfor %}"
+  },
+  {
+    "faq_id": 60,
+    "question": "Men hozir full stack python kursida bootrstrap darslarini ko'ryapman vazifalar berilgan, videoga biriktirilgan pdf fayli joylaganmiz deiylgan qani shu pdf qaerdan topamamiz",
+    "answer": "Kurs platformasida dars ostida 'Materiallar' yoki 'Resurslar' bo'limini tekshiring. Agar yo'q bo'lsa, kurs support xizmatiga murojaat qiling."
+  },
+  {
+    "faq_id": 61,
+    "question": "tasdiqlash kodni kiritganimda xatolik beryaptida",
+    "answer": "Kiritilgan kod to'g'ri formatda ekanligini tekshiring. Session yoki token muddati tugagan bo'lishi mumkin. Kod generatsiya qilish mantiqini va tekshirish qismini debug qiling."
+  },
+  {
+    "faq_id": 62,
+    "question": "Assalomu Alaykum, manda sql shunaqa bob qovotti nima qilsam boladi ?",
+    "answer": "SQL xatosini to'liq ko'rsating. Odatda sintaksis xatosi yoki tuzilma muammosi bo'ladi. Query ni qayta tekshiring, jadval va ustun nomlarini tasdiqlang."
+  },
+  {
+    "faq_id": 63,
+    "question": "# guruppadagilar hash() funksiyasi qaytaradigan hash qiymat bilan id funksiyasi qaytaradigan qiymat orasida bog'liqlik bormi?",
+    "answer": "id() - ob'ektning xotiradagi manzilini qaytaradi. hash() - ob'ektning hash qiymatini hisoblaydi (dict kalitlari uchun). Immutable ob'ektlarda hash(x) == id(x) bo'lishi mumkin, lekin har doim emas."
+  },
+  {
+    "faq_id": 64,
+    "question": "makemigrations qilsam no changes detected error qaytaryapti app ni dagi INSTALLED_APPS ga qoshib qoysam ham, nima qilsam boladi",
+    "answer": "models.py da o'zgarish borligini tekshiring. INSTALLED_APPS da app nomi to'g'ri yozilganini tasdiqlang. python manage.py makemigrations app_name buyrug'ini sinang."
+  },
+  {
+    "faq_id": 65,
+    "question": "Assalomu alaykum. Pythonni yangidan o'rnatgan edim, yangidan django install qilaman desam No Python at deyapti",
+    "answer": "Python PATH ga qo'shilganini tekshiring. CMD da python --version ishlashini sinang. Virtual environment yaratib, undagi pip dan foydalaning: python -m venv venv; venv\\Scripts\\activate; pip install django"
+  },
+  {
+    "faq_id": 66,
+    "question": "djangoda saytga yandex ads ni ulaganlar bormi? РСЯ ni o'rniga adfox orqali ulash uchun eng to'g'ri yo'l qaysi?",
+    "answer": "Template ga Yandex reklama kodini joylang. Context processor yoki template tag yaratib reklama kodlarini inject qiling. {% include 'ads/yandex_ad.html' %} kabi qiling."
+  },
+  {
+    "faq_id": 67,
+    "question": "Assalomu alaykum git hubdan biror projectni yuklab olgandan keyin bu pojectni oʻz kompyuterimizda ishga tushirish uchun nima qilish mumkin",
+    "answer": "git clone qiling. requirements.txt bo'lsa pip install -r requirements.txt bajaring. .env faylni sozlang. python manage.py migrate va runserver bajaring."
+  },
+  {
+    "faq_id": 69,
+    "question": "Assalomu alaykum HTML dan Job Application vazifasini bajarib yuklagandim Qachon tekshirib javobi aytiladi?",
+    "answer": "Kurs mentorlariga yoki platformadagi support xizmatiga murojaat qiling. Tekshirish muddati platforma qoidalariga bog'liq."
+  },
+  {
+    "faq_id": 72,
+    "question": ".zip fayl yuklansa ham Validatsiya xatosini beryapti",
+    "answer": "Fayl nomi va kengaytmasini tekshiring. Backend validatsiya qoidalarini ko'rib chiqing. FileField yoki FileExtensionValidator to'g'ri sozlanganini tasdiqlang."
+  },
+  {
+    "faq_id": 73,
+    "question": "Kursda Bootstrap 5 orgatilgan hozir 5.3 versiyasi ham bor shu versiya bilan u birxilmi?",
+    "answer": "Bootstrap 5.3 - 5.0 ning yangilangan versiyasi. Asosiy tushunchalar bir xil, yangi xususiyatlar qo'shilgan. 5.0 ni bilsangiz 5.3 ni tezda o'rganasiz."
+  },
+  {
+    "faq_id": 74,
+    "question": "Asalomu aleykum hammaga django ni tayyor LoginView modeli ishlamayapti masalan login va paroldi tersam home_page ga qaytmayapti",
+    "answer": "LOGIN_REDIRECT_URL ni settings.py da sozlang: LOGIN_REDIRECT_URL = '/home/'. urls.py da LoginView.as_view() to'g'ri connect qilinganini tekshiring."
+  },
+  {
+    "faq_id": 75,
+    "question": "Assalomu alaykum men fastAPI darslar bo'limini ko'ryotgandim shunga qo'shimcha documentatsiya o'qish uchun resurslar tavsiya qila olasizmi",
+    "answer": "Rasmiy FastAPI dokumentatsiyasi eng yaxshisi: fastapi.tiangolo.com. Real Python, TestDriven.io saytlarida ham yaxshi maqolalar bor."
+  },
+  {
+    "faq_id": 76,
+    "question": "Assalomu aleykum shu pastidagi kichik yozuvni qanday qilib kodlasa bo'ladi?",
+    "answer": "Savol aniq emas. HTML da <small> tag yoki CSS da font-size: 0.8em ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 77,
+    "question": "Ассалому алейкум хаммага. Validation функцияси ишламаяпти",
+    "answer": "clean() metodini to'g'ri override qilganingizni tekshiring. ValidationError import qilinganini tasdiqlang. Form da is_valid() chaqirilayotganini ko'ring."
+  },
+  {
+    "faq_id": 79,
+    "question": "Assalomu alaykum. Bootstrap 17.mavzu Accordion mavzuda uyga vazifa boridi uwan vidioga biriktirilgan pdf fayldan tekwrvoriwila",
+    "answer": "Dars sahifasidagi 'Resurslar' yoki 'Materiallar' bo'limini tekshiring. Kurs platformasi support ga murojaat qiling."
+  },
+  {
+    "faq_id": 80,
+    "question": "faqat shu bolim ishlamayabdi",
+    "answer": "Qaysi qism ishlamayotganini aniq yozing. Kod va xato xabarini yuborsangiz yordam beraman."
+  },
+  {
+    "faq_id": 81,
+    "question": "Assalomu alaykum. bootstrap yakunlanayotgan qismdagi loyiha linki topilmayapdi",
+    "answer": "Kurs platformasida dars ostidagi linkni tekshiring. Support xizmatiga murojaat qilib yangi link so'rang."
+  },
+  {
+    "faq_id": 82,
+    "question": "shared styl ulanmayapti",
+    "answer": "<link> tag to'g'ri yozilganini va CSS fayl yo'li to'g'riligini tekshiring. Brauzer konsolida 404 xatosi borligini ko'ring. {% load static %} qo'shilganini tasdiqlang."
+  },
+  {
+    "faq_id": 83,
+    "question": "kerak edi django yangi darslaridan. menda muommo bor bu login va logout qismida logout ishlamayabdi kod deyarli bir xil xammasi 405 xatolik beryabdi",
+    "answer": "LogoutView POST metodini talab qiladi. Template da <form method='post'>{% csrf_token %}<button>Logout</button></form> ishlatilganini tekshiring."
+  },
+  {
+    "faq_id": 85,
+    "question": "misol uchun nav elementlari yoqlmayapti",
+    "answer": "Bootstrap JS va CSS to'g'ri ulanganini tekshiring. Brauzer konsolida xato borligini ko'ring. {% load static %} va fayl yo'llari to'g'riligini tasdiqlang."
+  },
+  {
+    "faq_id": 86,
+    "question": "uztoz allauth.account packageni o'rnatsam rasmda keltirilgan hato korsatyapti",
+    "answer": "pip install django-allauth bajaring. INSTALLED_APPS ga 'django.contrib.sites', 'allauth', 'allauth.account' qo'shing. SITE_ID = 1 settings.py ga qo'shing."
+  },
+  {
+    "faq_id": 87,
+    "question": "migrations qanday tozalayman batafsilroq tushuntiring",
+    "answer": "app/migrations/ papkasidagi __init__.py dan tashqari barcha fayllarni o'chiring. DB ni tozalang: python manage.py flush. Keyin python manage.py makemigrations va migrate bajaring."
+  },
+  {
+    "faq_id": 88,
+    "question": "hato o'zgarmadi lekin o'chirdim migrationsdagi faylni",
+    "answer": "DB ni ham tozalash kerak. python manage.py migrate --fake appname zero bajaring. Keyin barcha migratsiyalarni qayta yarating."
+  },
+  {
+    "faq_id": 90,
+    "question": "undan tashqari footer styl xam olmayapti",
+    "answer": "CSS fayl yo'li to'g'ri ekanligini tekshiring. Brauzer konsolida 404 xatolik borligini ko'ring. CSS selector to'g'ri yozilganini tasdiqlang."
+  },
+  {
+    "faq_id": 91,
+    "question": "iltimos telegram guruhni oldingi variantiga qaytaringlar(html, css, js alohida edi)",
+    "answer": "Bu texnik yordam savoli emas. Guruh adminlariga murojaat qiling."
+  },
+  {
+    "faq_id": 92,
+    "question": "psycopyg2 o'rnatmoqchi bo'lganimda xatolik beryapti",
+    "answer": "pip install psycopg2-binary buyrug'ini ishlating (binary versiyasi osonroq). Windows da Visual C++ build tools kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 93,
+    "question": "Asslomu alaykum u 900 px width emasku u height ku, bu iPhone 14 pro Max Media queries",
+    "answer": "iPhone 14 Pro Max uchun @media (max-width: 430px) ishlatiladi. Height uchun: @media (max-height: 932px). Responsive dizayn uchun viewport meta tag qo'shing."
+  },
+  {
+    "faq_id": 95,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "requests kutubxonasi bilan: import requests; r = requests.get('url'); data = r.text. BeautifulSoup bilan parsing qiling. API bo'lsa, dokumentatsiyasini o'qing."
+  },
+  {
+    "faq_id": 96,
+    "question": "databaseni connect qilsam shunaqa error chiqyapti .env file ni ishlatmasdan shunde yozib connect qilsam ulanyapti",
+    "answer": ".env fayl to'g'ri o'qilayotganini tekshiring. python-decouple dan config import qiling: from decouple import config; DB_NAME = config('DB_NAME'). .env fayl root da turganini tasdiqlang."
+  },
+  {
+    "faq_id": 97,
+    "question": "Biz kim qaysi topshiriqni bajarayotganini qanday qilib bilamiz. Bitta vazifani bir nechta odam bajarishi mumkinku",
+    "answer": "Jamoa bilan Trello, Asana, GitHub Projects kabi tool ishlatib tasklarni distribute qiling. Yoki oddiy Google Sheets da kim nima qilayotganini yozib boring."
+  },
+  {
+    "faq_id": 98,
+    "question": "bunga ham javob berib keting. Keyin firebaseni bilasizmi agar firebaseni bilsangiz shu orqali ham backendda qilinadigan ishlarni koʻpchiligini qilish mumkin ekan",
+    "answer": "Firebase xavfsiz, lekin to'liq backend emas. Authentication, Firestore bor. Murakkab backend logika uchun Django/FastAPI yaxshiroq. Firebase oddiy loyihalar uchun mos."
+  },
+  {
+    "faq_id": 100,
+    "question": "Assalom Alaykum Kurs bo'limi oxiradagi topshiriqni yuklab bo'lmayabdi",
+    "answer": "Kurs platformasi support xizmatiga murojaat qiling. Brauzer keshini tozalang va boshqa brauzerda sinab ko'ring."
+  },
+  {
+    "faq_id": 101,
+    "question": "psql ni qayta o'rnatmasdan, requirementsni o'zidan ham o'zgartirib qo'yilsa bo'ladimi?",
+    "answer": "Ha, requirements.txt ni o'zgartirsangiz bo'ladi. psycopg2 o'rniga psycopg2-binary yozing. Keyin pip install -r requirements.txt bajaring."
+  },
+  {
+    "faq_id": 102,
+    "question": "aka django loyihalarni linkini tashlab yuboresizmi bolar qilganini namuna sifatida",
+    "answer": "GitHub da 'django projects' qidirsangiz ko'p namunalar topasiz. Masalan: github.com/topics/django yoki Awesome Django ro'yxatini ko'ring."
+  },
+  {
+    "faq_id": 104,
+    "question": "Oldin ham mavzuga to'xtalgan edim. Qisqacha tushuntirib ketdim yuqorida. Mendagi muammo nimada. Allaqachon ushbu logika bilan qurilgan project bitta User model qilib role berib ketishga kech ancha boshqacha yo'lini ayta olasizmi?",
+    "answer": "Proxy modellar ishlatishingiz mumkin: class Student(User): class Meta: proxy=True. Yoki OneToOneField bilan profile modellar yarating. Role-based access uchun django-role-permissions ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 105,
+    "question": "drf da view lar yozish uchun bir nechta variantlar bor masalan: APIView GenericView ViewSet lar mixinslar va hammasida ham biz ko'zlagan viewimizni yoza olamiz savol qaysi birini qaysi holatda qo'llash kerakligini qanday bilamiz qaysi birini qayerda qo'llasak yaxshi bo'ladi shu bo'yicha tavsiya bering",
+    "answer": "Oddiy CRUD uchun ViewSet eng tez. Custom logika kerak bo'lsa APIView. CRUD ning bir qismini override qilish kerak bo'lsa GenericView + Mixins. ViewSet > GenericView > APIView tartibida complexlikka qarab tanlaymiz."
+  },
+  {
+    "faq_id": 106,
+    "question": "Men Djangoni va DRF ni o'rtacha bilaman shu bilimimni oshirish uchun nima tavsiya bera olasiz",
+    "answer": "Real loyiha qiling (e-commerce, blog, API). Django dokumentatsiyasini to'liq o'qing. Two Scoops of Django kitobini o'qing. GitHub da boshqa loyihalarni o'rganing. TestDriven.io tutorials qiling."
+  },
+  {
+    "faq_id": 107,
+    "question": "simplejwt o'rnatganimdan keyin negadir run qilib bo'lmayapti?",
+    "answer": "INSTALLED_APPS ga 'rest_framework_simplejwt' qo'shing. REST_FRAMEWORK settings da DEFAULT_AUTHENTICATION_CLASSES ni sozlang. urls.py da token endpoint qo'shing. Xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 108,
+    "question": "Aka assalomu alaykum. Mendagi muammo nimada Aytaylik Student modelda 20 xil field bor Teacher modelda ham Student modeldagidan farq qiladigan 15 xil field bor employee modelida ham bu ikkisidan farq qiladigan kamida 10 xil field bor (Nomlari farq qiladi) Custom user modelda shunda taxminan 35-40 ta field qilib (role ham bo'ladi bunga e'tibor bermaysiz) qilib chiqib null=True, blank=True qilib chiqishim kerakmi shunda?",
+    "answer": "Yo'q, bir modelga 40 ta field qo'yish yomon. OneToOneField bilan profile modellar yarating: StudentProfile, TeacherProfile. AbstractBaseUser dan inherit qilib, faqat common fieldlarni User da saqlang."
+  },
+  {
+    "faq_id": 109,
+    "question": "mening laptopimni xarakteristikasi Ram 16GB Core i3 11Gen PyCharmga to'g'ri keladimi?",
+    "answer": "Ha, yetarli. PyCharm Community edition yaxshi ishlaydi. Agar sekin bo'lsa, VS Code ishlatishingiz mumkin - u yengilroq."
+  },
+  {
+    "faq_id": 110,
+    "question": "Boshqa screenshot ketib qolibdi. Mana shundan keyin nima qilsam bo'ladi? Yangi yuklangan VS Code bu",
+    "answer": "Python extension o'rnating (Microsoft). Workspace ochib, terminal da virtual environment yarating: python -m venv venv. Activate qiling va ishlang."
+  },
+  {
+    "faq_id": 111,
+    "question": "bitta savolim bor edi men chat yozmoqchi edim telegramga o'xshagan djangoda, buni iloji bormi yoki yo'qmi, va men django-Channels kutubxonasidan foydalanmoqchi edim",
+    "answer": "Ha, iloji bor. Django Channels WebSocket qo'llab-quvvatlaydi. Real-time chat uchun perfect. Redis kerak bo'ladi. Channels dokumentatsiyasidagi chat tutorial ni bajaring."
+  },
+  {
+    "faq_id": 112,
+    "question": "JavaScript Python va boshqa bo'limlarning dars fayllarini (PDF) qaerdan olsam bo'ladi",
+    "answer": "Kurs platformasida har bir dars ostida 'Resurslar' yoki 'Materiallar' bo'limi bo'lishi kerak. Agar yo'q bo'lsa, support xizmatiga murojaat qiling."
+  },
+  {
+    "faq_id": 113,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "Web scraping uchun requests va BeautifulSoup ishlatiladi: import requests; from bs4 import BeautifulSoup; r = requests.get(url); soup = BeautifulSoup(r.text, 'html.parser'). Aniq muammoni yozing."
+  },
+  {
+    "faq_id": 114,
+    "question": "Assalomu alaykum Nimagadir telegram guruhning chatlari ochib ketdi yordam bering iltimos",
+    "answer": "Guruh sozlamalarida 'Topics' yoki 'Forum mode' o'chirilgan bo'lishi kerak. Guruh adminlariga murojaat qilib normal chat rejimiga qaytarishni so'rang."
+  },
+  {
+    "faq_id": 115,
+    "question": "Assalomu alaykum men HTML da projectni bajarib yukladim va muvaffaqiyatsiz bo'ldi endi qayerda xato ekanini bilsam bo'ladimi?",
+    "answer": "Kurs platformasida yuklangan topshiriq ostida mentor kommentlari yoki feedback bo'lishi kerak. Agar yo'q bo'lsa, support ga murojaat qiling va aniq feedback so'rang."
+  },
+  {
+    "faq_id": 116,
+    "question": "Assalomu alaykum VS Code yuklagan edim login so'rayapti nima qilishim kerak bu yerda",
+    "answer": "Login qilish ixtiyoriy. 'Skip' yoki 'Continue without login' bosing. Keyin ham ishlataverasiz. GitHub account bilan login qilsangiz sync qilish imkoniyati paydo bo'ladi."
+  },
+  {
+    "faq_id": 117,
+    "question": "Yana bir savol bor edi. topshiriqda berilgan saytni scroll qilib pastga tushgan sayin animatsiyalar ishga tushayapti shuni faqatgina HTML va CSS dan foydalanib qilish mumkinmi",
+    "answer": "Yo'q, scroll-based animatsiyalar uchun JavaScript kerak. Intersection Observer API ishlatiladi. Yoki CSS animation-timeline eksperimental xususiyati bor (limited support)."
+  },
+  {
+    "faq_id": 119,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "requests.get(url) bilan sahifani oling. BeautifulSoup bilan parse qiling. API bo'lsa, requests.get(api_url, headers={...}) ishlatib JSON oling. Aniq muammoni yozib bering."
+  },
+  {
+    "faq_id": 120,
+    "question": "Assalomu alaykum! CSS darsida Font yordamida loyihani yaxshilash darsiga kelgandim. Shu fontni umuman sezmayapti. O'zgarishsiz bir xil turibdi. Boshqa fontlarni qo'yib ko'rdim baribir o'zgarmayapti. Shuni qanday to'g'rilasa bo'ladi?",
+    "answer": "@font-face to'g'ri yozilganini tekshiring. Font fayl yo'li to'g'riligini tasdiqlang. Brauzer konsolida font yuklanganini ko'ring. font-family nomini CSS da to'g'ri yozganingizni tekshiring."
+  },
+  {
+    "faq_id": 121,
+    "question": "postmanda request jo'natganman. admin panelga save bo'lyapti lekin bu yerda xato ko'rsatyapti",
+    "answer": "Serializer da return qilinadigan response to'g'ri emasligini bildiradi. serializer.data ni return qilib turganingizni tekshiring. status code ham to'g'ri qaytaryapsizmi?"
+  },
+  {
+    "faq_id": 122,
+    "question": "Assalomu alaykum Django va DRF orqali qanday qilib multiple file yuklaydigan API yozsa bo'ladi shuni tushuntirib yuboring Djangodagi FileField multiple file qabul qilmas ekan",
+    "answer": "Alohida Image/File model yarating va ForeignKey qiling. Frontenddan list ko'rinishida file yuboring. View da for loop bilan har birini alohida save qiling. Yoki django-multiupload paketidan foydalaning."
+  },
+  {
+    "faq_id": 123,
+    "question": "nima uchun men kiritgan ma'lumotlarni o'rniga string string, int int bo'lib qolgan",
+    "answer": "Print qilayotgan joyingizda variable o'rniga variable nomini string sifatida yozib qo'ygan bo'lishingiz mumkin. Kodingizni ko'rsating, aniq yordam beraman."
+  },
+  {
+    "faq_id": 124,
+    "question": "secret key ulab turgan decouple modulida config da xato beryapti",
+    "answer": ".env fayl root directory da turganini tekshiring. from decouple import config to'g'ri import qilinganini tasdiqlang. .env da SECRET_KEY='...' qo'shtirnoq ichida yozilganini ko'ring."
+  },
+  {
+    "faq_id": 125,
+    "question": "fastapi_jwt_auth kutubxonasidagi ni o'zgartirdim bo'masam ishlamadi bu to'g'rimi yo'q keyinchalik xatolar tug'iladimi",
+    "answer": "Kutubxona kodini o'zgartirish yomon practice. Fork qilib o'z versiyangizni yarating yoki boshqa JWT kutubxonasini ishlating (python-jose). Xato nima ekanini aniq yozing."
+  },
+  {
+    "faq_id": 126,
+    "question": "Assalomu alaykum! HTML Formsda ism sharif otangizni ismi yozuvlarini kataklar ostiga tushirib bo'lmayapti. Qanday to'g'rilasa bo'ladi?",
+    "answer": "Label va input ni <div> ichiga o'rang. CSS da display: block qo'shing yoki <br> tag ishlatib yangi qatorga o'tkazing. Flexbox/Grid bilan formani tartibga soling."
+  },
+  {
+    "faq_id": 127,
+    "question": "E-commerce projectga contribute qilmoqchiman .env configuration ni batafsil yozib berasizmi telegram negadir ishlamayapti",
+    "answer": "Project README.md da .env example bo'lishi kerak. Odatda: DATABASE_URL, SECRET_KEY, DEBUG, ALLOWED_HOSTS kerak. Telegram bot uchun BOT_TOKEN va CHAT_ID kerak bo'ladi."
+  },
+  {
+    "faq_id": 128,
+    "question": "load static ishlamayapti yordam berib yuboringlar",
+    "answer": "Template boshida {% load static %} yozilganini tekshiring. STATIC_URL settings.py da to'g'ri sozlanganini tasdiqlang. {% static 'path/to/file' %} sintaksisi to'g'riligini ko'ring."
+  },
+  {
+    "faq_id": 129,
+    "question": "Bootstrapdagi POPOVER ni qanday ishlatsak bo'ladi videodagi <SCRIPT> da yozilgan kodni kerak videodagini yozsam ishlamayapti",
+    "answer": "Bootstrap 5 da popover initialize qilish kerak: const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]')); popoverTriggerList.map(el => new bootstrap.Popover(el));"
+  },
+  {
+    "faq_id": 130,
+    "question": "assalomu alaykum ustoz heroku da reg qilmoqchi edim lekin gmail ga link kelmayapti",
+    "answer": "Spam papkani tekshiring. Boshqa email bilan sinab ko'ring. Heroku hozir yangi userlar uchun credit card talab qiladi, alternatif sifatida Railway, Render yoki PythonAnywhere ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 131,
+    "question": "Assalomu aleykum Functionni parametrida index berilgan va keyin console.log qilib chiqarilganda outputda indexlar chiqib ketdi shu nimaga bo'layotganini tushuntirib bering iltimos",
+    "answer": "Array metodlari (forEach, map) callback ga 3 ta parameter beradi: (element, index, array). Siz faqat index ni console.log qilgan bo'lsangiz kerak. element ni ham log qiling."
+  },
+  {
+    "faq_id": 132,
+    "question": "i18n tarjima qilinayotgandim shunday error chiqdi",
+    "answer": "django.po faylda sintaksis xatosi bo'lishi mumkin. python manage.py compilemessages bajaring. LOCALE_PATHS to'g'ri sozlanganini tekshiring. Xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 133,
+    "question": "Salom menda bir savol darslikda berilayotgan kodlarni hammasini yodlab olish shartmi",
+    "answer": "Yo'q, yod olish shart emas. Tushunish va qo'llash muhim. Ko'p mashq qiling, kerak bo'lganda dokumentatsiyaga qarang. Vaqt o'tishi bilan avtomatik esda qoladi."
+  },
+  {
+    "faq_id": 134,
+    "question": "sizda ASGI deploy bo'yicha instruction yoki video yo'qmi",
+    "answer": "Django Channels dokumentatsiyasida ASGI deployment guide bor. Daphne yoki Uvicorn + Nginx kombinatsiyasi ishlatiladi. DigitalOcean tutoriallari ham yaxshi."
+  },
+  {
+    "faq_id": 135,
+    "question": "Django loyihasi PyCharm Community edition qanday pluginlar o'rnatsak bo'ladi HTML CSS filelarni qulay ishlatish uchun",
+    "answer": "PyCharm Community da HTML/CSS/JS support built-in bor. Qo'shimcha: Django Support (faqat Professional), Emmet, Material Theme UI. VS Code yengilroq alternativa."
+  },
+  {
+    "faq_id": 136,
+    "question": "Tayyor youtube video biriktiribsizlar hech bo'lmasa materiallarni qo'yib qo'yinglar",
+    "answer": "Kurs platformasi support xizmatiga murojaat qiling. Materiallar dars sahifasida bo'lishi kerak. Agar yo'q bo'lsa, admin/mentorlardan so'rang."
+  },
+  {
+    "faq_id": 137,
+    "question": "Assalom alaykum hammaga OOP bo'yicha vazifani bajardim. Kod ishlayapti ma'lumotlar to'liq chiqyapti. Lekin kodni yuborsam har safar ustozdan to'liq ta'rifni chiqarish kerak degan javob kelyapti. Shu vazifani tekshirib beradiganlar bormi.",
+    "answer": "__str__ yoki __repr__ metodini to'liqroq yozing. Barcha muhim attributelarni chiqaring. Misol: return f'{self.name}, {self.age}, {self.city}'. Vazifa talabini diqqat bilan o'qing."
+  },
+  {
+    "faq_id": 138,
+    "question": "serverdagi saytga rasm yuklaganda permission error beryapti nginx ni sozladim, WSGI, media, static ishlayapti. shunda hozir media papkasini permission ini o'zgartirishim kerakmi",
+    "answer": "Ha, sudo chown -R www-data:www-data /path/to/media yoki sudo chmod -R 755 /path/to/media bajaring. Nginx user va Django user bir xil bo'lishi kerak."
+  },
+  {
+    "faq_id": 139,
+    "question": "bu serverga kirish uchun linkdan xato kod kelyapti",
+    "answer": "Link noto'g'ri yoki muddati tugagan bo'lishi mumkin. Yangi link so'rang. VPN ishlatib ko'ring. DNS cache ni tozalang."
+  },
+  {
+    "faq_id": 140,
+    "question": "Job Application bo'yicha topshiriqni qanday yuklaymiz zip arxivni qabul qilmayaptiku?",
+    "answer": "Faqat HTML fayllarni yuklash kerak bo'lishi mumkin. Yoki GitHub link yuboring. Platformada qanday format qabul qilinishini talablardan o'qing."
+  },
+  {
+    "faq_id": 141,
+    "question": "Assalomu alaykum. Python kursi bo'yicha darslarning tekst ko'rinishi video ostida qoldirilgan deyapti. lekin topa olmayapman???",
+    "answer": "Video player ostida 'Transcription', 'Materiallar' yoki 'Resurslar' tugmasi bo'lishi kerak. Agar yo'q bo'lsa, support xizmatiga murojaat qiling."
+  },
+  {
+    "faq_id": 142,
+    "question": "Savolingiz oldidan deb qo'yishingiz shart",
+    "answer": "Bu savol emas, eslatma. Guruh qoidalariga rioya qiling."
+  },
+  {
+    "faq_id": 143,
+    "question": "home.html fayliga yangiliklar qo'shgan edim lekin yangiliklar chiqmay qoldi Slider yo'q bo'lib qoldi. Ne sabab bo'lishi mumkin?",
+    "answer": "Template sintaksisida xato bo'lishi mumkin. {% for %} taglarini to'g'ri yopganingizni tekshiring. Context da ma'lumot uzatilganini tasdiqlang. Brauzer konsolida JS xatolarini ko'ring."
+  },
+  {
+    "faq_id": 144,
+    "question": "Ekrani yonboshida menda bo'sh joy qoldiryapti",
+    "answer": "CSS da body {margin: 0; padding: 0;} qo'shing. Yoki * {box-sizing: border-box;} ishlatib ko'ring. Brauzer developer tools bilan qaysi element margin qo'shayotganini toping."
+  },
+  {
+    "faq_id": 145,
+    "question": "bitta muammo bor ustoz darsda shu kodni yozgan men ham server olgan edim endi men qanday kod yozishim kerak bo'ladi collectstatic qilsam rasmlar chiqmayapdi. static va media ga shuni o'zini yozishim yetarlimi ozroq tushunmayapman qanday qilishni",
+    "answer": "Nginx config da static va media locationlarni to'g'ri sozlang. STATIC_ROOT va MEDIA_ROOT settings.py da to'g'ri yo'l ko'rsating. collectstatic keyin Nginx restart qiling."
+  },
+  {
+    "faq_id": 146,
+    "question": "Men barcha applarni apps degan papka yaratib shu papkani ichida yaratmoqchi edim shunday qilganlar bormi menda applarni ko'rmayapti",
+    "answer": "INSTALLED_APPS da 'apps.app_name' formatida yozing. Yoki app ichidagi apps.py da name = 'apps.app_name' sozlang. __init__.py fayllar mavjudligini tekshiring."
+  },
+  {
+    "faq_id": 147,
+    "question": "Assalomu alaykum Oxirgi darslarga kelgandim va tillarni o'zgartirish xususiyatini kiritdim. Lekin tilni o'zgartirganimda shu yerdagi content ko'rinmay qolayapti",
+    "answer": "Tarjima fayllari to'g'ri compile qilinganini tekshiring: compilemessages. {% trans %} taglar to'g'ri ishlatilganini tasdiqlang. LANGUAGE_CODE va LANGUAGES to'g'ri sozlanganini ko'ring."
+  },
+  {
+    "faq_id": 148,
+    "question": "Assalomu aleykum serializer ga title uchun validate metodini yozib request POST qilib jo'natsam mana bunday xatolik chiqyapti nimaga bunday bo'lyapti?",
+    "answer": "validate_title metodi to'g'ri return qilganini tekshiring. ValidationError to'g'ri raise qilinganini tasdiqlang. Xato xabarini to'liq ko'rsating."
+  },
+  {
+    "faq_id": 149,
+    "question": "migrate qilganimdan keyin ham database SQL shunday chiqyapti",
+    "answer": "Migratsiyalar haqiqatan bajarilganini tekshiring: python manage.py showmigrations. DB connection to'g'ri ekanligini tasdiqlang. Migrations papkasini tekshiring."
+  },
+  {
+    "faq_id": 150,
+    "question": "\"detail\": \"Authentication credentials were not provided.\" Settingsda hammasi to'g'rilab chiqdim lekin baribir shu xato chiqayapti",
+    "answer": "Request headerga Authorization: Bearer <token> qo'shilganini tekshiring. DEFAULT_AUTHENTICATION_CLASSES to'g'ri sozlanganini tasdiqlang. Token yaratilgan va valid ekanligini ko'ring."
+  },
+  {
+    "faq_id": 151,
+    "question": "yordam bering iltimos",
+    "answer": "Muammoni aniq tasvirlab yozing. Qaysi xato yoki hodisa yuz berayotganini, kod va xato xabarini bildiring."
+  },
+  {
+    "faq_id": 152,
+    "question": "Sign Up page ga o'tganda Value Error chiqyapti, To'g'rilolmadim",
+    "answer": "Form validatsiyasini tekshiring. Field turlari to'g'ri ekanligini tasdiqlang. Xato xabarini to'liq ko'rsating. Clean metodlarida to'g'ri return qilinayotganini ko'ring."
+  },
+  {
+    "faq_id": 153,
+    "question": "Menda nimagadir Bootstrap ishlamayapti",
+    "answer": "Bootstrap CSS va JS fayllar to'g'ri ulanganini tekshiring. CDN linklar to'g'riligini tasdiqlang. Brauzer konsolida 404 xato borligini ko'ring. Class nomlarini to'g'ri yozganingizni tekshiring."
+  },
+  {
+    "faq_id": 154,
+    "question": "Assalomu alaykum FastAPI da docs va redoc larga login parol orqali kirishni qanday amalga oshirsa bo'ladi, yani faqat ruxsati borlar ko'rishi uchun",
+    "answer": "app.openapi_url ni conditional qiling: app.openapi_url = '/openapi.json' if settings.DEBUG else None. Yoki dependency bilan: @app.get('/docs', dependencies=[Depends(check_admin)]). Production da docs ni o'chiring."
+  },
+  {
+    "faq_id": 155,
+    "question": "Assalomu alaykum, agar savolingiz mentorga bo'lsa tegidan foydalaning va biroz sabr qiling mentor javob beradi.",
+    "answer": "Bu savol emas, guruh qoidasi eslatmasi."
+  },
+  {
+    "faq_id": 156,
+    "question": "Assalomu aleykum nimagadir utils dan datetime_safe ni topolmayapti?",
+    "answer": "datetime_safe Django 4.0 dan deprecated. To'g'ridan-to'g'ri from datetime import datetime ishlatib, timezone awareness uchun django.utils.timezone dan foydalaning."
+  },
+  {
+    "faq_id": 157,
+    "question": "Pythonda bir joyini ko'p chalkashtirayapman while sikli bilan for ning nima farqi bor",
+    "answer": "for - ma'lum iteratsiya uchun (list, range). while - shart true bo'lganda. Misol: for i in range(5) - 5 marta. while x < 5 - x 5 dan kichik bo'lguncha."
+  },
+  {
+    "faq_id": 158,
+    "question": "LoginView ishlab, LogoutView esa ishlamayapti",
+    "answer": "LogoutView POST metodini talab qiladi. Template da <form method='post'>{% csrf_token %}<button>Logout</button></form> ishlatilganini tekshiring. GET emas POST ishlatishingiz kerak."
+  },
+  {
+    "faq_id": 159,
+    "question": "Shuni tepaga o'tkazish uchun qanday xossadan foydalanish kerak",
+    "answer": "CSS da position: absolute yoki fixed; top: 0; ishlatib ko'ring. Flexbox bo'lsa align-items: flex-start. Grid bo'lsa align-self: start."
+  },
+  {
+    "faq_id": 161,
+    "question": "shunga nima qilish kerakligini ayting dekanatdan so'rashim kerakmi email berishadimi",
+    "answer": "Savol konteksti aniq emas. Universitet email kerak bo'lsa, dekanat yoki IT bo'limiga murojaat qiling."
+  },
+  {
+    "faq_id": 162,
+    "question": "bu holatda uzun textlarni translate qilmayapti",
+    "answer": "{% blocktrans %}...{% endblocktrans %} ishlatib ko'ring. makemessages va compilemessages qayta bajaring. .po faylda string uzun bo'lsa, msgstr ni to'g'ri to'ldirganingizni tekshiring."
+  },
+  {
+    "faq_id": 163,
+    "question": "telegramda ovoz chiqmayapti",
+    "answer": "Bu texnik yordam savoli emas. Telegram sozlamalarida ovoz va bildirishnomalar yoqilganini tekshiring. Telefon sozlamalarini ham ko'ring."
+  },
+  {
+    "faq_id": 164,
+    "question": "Bootstrap ni ulagandan keyin shunday xato beryapti",
+    "answer": "Xato xabarini ko'rsating. Bootstrap versiyasi to'g'riligini tekshiring. CDN link ishlayotganini tasdiqlang. Brauzer konsolini tekshiring."
+  },
+  {
+    "faq_id": 165,
+    "question": "Assalomu alaykum vazifasini tugata olmayapman Faylni yuklamayapti ... — bunga tushunmadim Iltimos, yordam bersangiz",
+    "answer": "Fayl hajmini kichikroq qiling. Internetni tekshiring. Boshqa brauzerda sinab ko'ring. Platformada qabul qilinadigan format va hajm chegarasini o'qing."
+  },
+  {
+    "faq_id": 166,
+    "question": "Assalom aleykum amaliy loyihaga 2 kun bo'ldi hali tekshirilmadi",
+    "answer": "Sabr qiling, mentorlar ish yukini ko'rib chiqishadi. Support xizmatiga murojaat qilib tekshirish holatini so'rang."
+  },
+  {
+    "faq_id": 167,
+    "question": "kirdim osha joy bo'lyapti sign up qilsam registratsiya bo'lgan deyapti emailga login qilsam 60 kun ga chiqyapti",
+    "answer": "Email tasdiqlash linkini bosing. Spam papkani tekshiring. Account allaqachon mavjud bo'lsa, 'Forgot password' orqali parolni tiklang."
+  },
+  {
+    "faq_id": 168,
+    "question": "agar githubdan boshqa account ochib keyin universitet bergan email orqali yana student pack olsa bo'ladimi?",
+    "answer": "Ha, GitHub Student Pack uchun universitet emaili kerak. Yangi account ochib, universitet emaili bilan verify qiling va student pack uchun ariza bering."
+  },
+  {
+    "faq_id": 169,
+    "question": "men qilayotgan saytimda batafsil degan knopka bosilganida har bir odamni ma'lumotlari chiqishi kerak edi bu ma'lumotlar dinamik holatda kiritilganida hammasida bir xil ma'lumot chiqib qolyabdi biladiganlar bo'lsa yordam berib yuboringlar iltimos",
+    "answer": "Template da to'g'ri object pass qilganingizni tekshiring. View da get_object_or_404 ishlatib to'g'ri ID bo'yicha object oling. URL da pk yoki id parametri to'g'ri uzatilayotganini ko'ring."
+  },
+  {
+    "faq_id": 170,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "Web scraping uchun: import requests, BeautifulSoup. response = requests.get(url); soup = BeautifulSoup(response.text, 'html.parser'). Kerakli elementlarni soup.find() bilan toping."
+  },
+  {
+    "faq_id": 171,
+    "question": "Visual Studio Code aynasining burchak qismida Explorer qismi yo'qolib qoldi",
+    "answer": "Ctrl+B (Windows/Linux) yoki Cmd+B (Mac) bosing. Yoki View > Appearance > Primary Side Bar ni tanlang. Explorer ikonkasiga (yuqori chap) bosishingiz ham mumkin."
+  },
+  {
+    "faq_id": 172,
+    "question": "Visual Studio Code ga index.html fayli ochib CSS va JS fayllarini qo'sha olmayapman yordam berib yuboringlar",
+    "answer": "HTML da <link rel='stylesheet' href='style.css'> va <script src='script.js'></script> qo'shing. Fayllar bir papkada turganini tekshiring. Yo'llarni to'g'ri yozganingizni tasdiqlang."
+  },
+  {
+    "faq_id": 173,
+    "question": "fastapi serverni Ctrl+C dan boshqa to'xtatish yo'li bormi",
+    "answer": "Terminal oynasini yoping yoki task manager da process ni to'xtating. Linux/Mac da: ps aux | grep uvicorn keyin kill -9 <PID>. Lekin Ctrl+C eng to'g'ri usul."
+  },
+  {
+    "faq_id": 174,
+    "question": "Assalomu alaykum qanday qilib PSQL bazadagi ma'lumotlarni ko'ra olamiz?",
+    "answer": "psql -U username -d database_name bajaring. Keyin \\dt - jadvallar ro'yxati, SELECT * FROM table_name; - ma'lumotlarni ko'rish. pgAdmin GUI ishlatishingiz ham mumkin."
+  },
+  {
+    "faq_id": 175,
+    "question": "Assalomu alaykum, send_mail ishlamayapti. Google settingsdan kerakli narsani turn on qildim, lekin baribir shu xatoni beryapti",
+    "answer": "App Password yarating (2-factor auth yoqilgan bo'lsa). settings.py da EMAIL_HOST_USER va EMAIL_HOST_PASSWORD to'g'ri sozlang. EMAIL_USE_TLS = True bo'lishini tekshiring."
+  },
+  {
+    "faq_id": 176,
+    "question": "assalomu alaykum men kursni deyarli tugatdim sertifikatni olish uchun nima qilishim kerak bo'ladi?",
+    "answer": "Kurs platformasida 'Sertifikat' bo'limi bo'lishi kerak. Barcha topshiriqlarni tugatganingizdan so'ng avtomatik beriladi. Support ga murojaat qiling."
+  },
+  {
+    "faq_id": 177,
+    "question": "Assalomu alaykum. Psql ni Windows Powershellga qanday qilib ulash mumkin. PostgreSQL ni o'rnatganimdan keyin Powershellda psql --version buyrug'ini yuborsam xatolik qaytarypti",
+    "answer": "PostgreSQL bin papkasini PATH ga qo'shing: C:\\Program Files\\PostgreSQL\\<version>\\bin. System Environment Variables > Path ga qo'shing. PowerShell qayta oching."
+  },
+  {
+    "faq_id": 178,
+    "question": "Assalomu Aleykum iltimos yordam berib yuboringlar men loyihani Digital Oceanga deploy qilayotganidim hamma narsasi tayyor ishlayapti faqat gunicorndan tashqari",
+    "answer": "Gunicorn command: gunicorn --workers 3 --bind config.wsgi:application. wsgi.py to'g'ri yo'lda ekanligini tekshiring. Virtualenv activate qilinganini tasdiqlang. Log faylni tekshiring."
+  },
+  {
+    "faq_id": 179,
+    "question": "HTML da job application ni javobi qachon chiqadi?",
+    "answer": "Kurs mentorlariga yoki support xizmatiga murojaat qilib tekshirish muddatini bilib oling. Odatda 3-7 kun ichida javob beriladi."
+  },
+  {
+    "faq_id": 180,
+    "question": "mana xatolikni ko'rmadizmi",
+    "answer": "Xato xabarini yuboring, ko'rib yordam beraman."
+  },
+  {
+    "faq_id": 181,
+    "question": "hit_count_generic choise bo'lib qolgan uni qanday qilib avtomatik to'ldirsam bo'ladi, hit_count_generic orqali sort qilaman desam None qiymat qaytarypti oshunga sort bo'lmayapti",
+    "answer": "default=0 yoki null=False qo'shing. Mavjud recordlar uchun: ModelName.objects.filter(hit_count_generic__isnull=True).update(hit_count_generic=0). Keyin sort ishlaydi."
+  },
+  {
+    "faq_id": 182,
+    "question": "mana shu yerdagi command qismi negadir ishga tushmayapti ekan bitta bitta terminaliga kirib ishlatib ko'rdim ishlayapti lekin automatik celeryni workerini ishga tushurmaypti ekan",
+    "answer": "Supervisor yoki systemd ishlatib celery worker va beat ni service sifatida ishga tushuring. docker-compose ishlatayotgan bo'lsangiz, command: celery -A project worker -l info qo'shing."
+  },
+  {
+    "faq_id": 183,
+    "question": "Assalomu alaykum. menda user va company model bor. aytaylik bitta user 1ta kompaniyada ro'yxatdan o'tadi va o'sha kompaniyaga client bo'ladi deylik. lekin boshqa kompaniyalar uchun o'sha user client hisoblanmaydi. bitta db. shuni qanday qilishga hech fikr kelmayapti.",
+    "answer": "ManyToMany relationship yarating: User - Company through ClientMembership model. ClientMembership da user, company, role fieldlari bo'lsin. Har bir company uchun alohida client records."
+  },
+  {
+    "faq_id": 184,
+    "question": "xatolik qandayligini ko'rsatmayapti belgilagan urlimga kirmayapti 404 beryapti qayerda xatolik bo'lyapti ko'rberin",
+    "answer": "urls.py da path to'g'ri yozilganini tekshiring. URL pattern va view nomini tasdiqlang. python manage.py show_urls (django-extensions) bilan barcha URLlarni ko'ring. URL oxirida / borligini tekshiring."
+  },
+  {
+    "faq_id": 185,
+    "question": "men CSS darslarida (max-width:767px) qilsam ishlayapti video darsdagidek qilib only screen and (max-width:767px) deb ko'rsatsam ishlamayapti",
+    "answer": "@media screen and (max-width: 767px) to'g'ri sintaksis. 'only' ixtiyoriy va qo'shimcha ta'sir bermaydi. Brauzer developer tools bilan media query ishlayotganini tekshiring."
+  },
+  {
+    "faq_id": 186,
+    "question": "breakpointslar chiqmayapti. lyuboy widthdaham bir xil ko'rinishga ega bo'lib qolyapti",
+    "answer": "Viewport meta tag boshda mavjudligini tekshiring: <meta name='viewport' content='width=device-width, initial-scale=1'>. Media query sintaksisini va CSS specificity ni ko'ring."
+  },
+  {
+    "faq_id": 187,
+    "question": "Assalamu aleykum Pipenv virtual muhitini Install qilib bo'lgach uni ishlata olmayapman, (pipenv --version) deb yozsam (is not recognized) degan yozuv chiqmoqda",
+    "answer": "Python Scripts papkasi PATH ga qo'shilmagan. pip install --user pipenv bajaring. Yoki venv ishlatishni tavsiya qilaman: python -m venv venv."
+  },
+  {
+    "faq_id": 188,
+    "question": "Assalomu alaykum FastAPI da docs va redoc larga login parol orqali kirishni qanday amalga oshirsa bo'ladi, yani faqat ruxsati borlar ko'rishi uchun",
+    "answer": "app.openapi_url ni None qilib qo'ying production da. Yoki custom dependency yarating: @app.get('/docs', dependencies=[Depends(verify_admin)]). HTTPBasic auth qo'shing."
+  },
+  {
+    "faq_id": 189,
+    "question": "Ushbu misolda dastur 2 sonini 5 marta chiqaryapti. Shu 2 sonini har birini bir qatorda yozmasdan yonma-yon yozish uchun nima qilsak bo'ladi? 2, 2, 2, 2, 2 shaklida",
+    "answer": "print(2, end=', ') ishlatib ko'ring. Yoki: result = ', '.join(['2']*5); print(result). Yoki: print(*[2]*5, sep=', ')."
+  },
+  {
+    "faq_id": 190,
+    "question": "assalom aleykum, djangoga template ulashda static fayl ichiga hamma ko'rinishlarni berdim, lekin static faylni o'qisam CSS ni o'qimayapti",
+    "answer": "{% load static %} template boshida yozilganini tekshiring. STATIC_URL va STATICFILES_DIRS to'g'ri sozlang. python manage.py collectstatic bajaring. Brauzer cache tozalang."
+  },
+  {
+    "faq_id": 191,
+    "question": "menda template folder degan funksiya chiqmayabdi",
+    "answer": "PyCharm da folder yaratib nomini 'templates' qo'ying. settings.py da TEMPLATES > DIRS ga 'templates' qo'shing: DIRS: [BASE_DIR / 'templates']."
+  },
+  {
+    "faq_id": 192,
+    "question": "connection to server at localhost port 5432 failed: Connection refused shunday xato chiqyapti",
+    "answer": "PostgreSQL service ishlamayapti. Windows da: services.msc > PostgreSQL ni start qiling. Linux: sudo systemctl start postgresql. Port to'g'riligini ham tekshiring."
+  },
+  {
+    "faq_id": 193,
+    "question": "Error loading psycopg2 or psycopg module shunday xatolik chiqyapti",
+    "answer": "pip install psycopg2-binary bajaring. Virtual environment ichida ekanligingizni tekshiring. Windows da Visual C++ build tools kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 194,
+    "question": "Assalomu aleykum men HTML darslarida VS Code orqali kod yozganimda va Google Chromeda ochganimda Desktopda shunday qizil X bo'lib qolayapti shularni qanday to'g'irlasam bo'ladi",
+    "answer": "Rasm fayl yo'li noto'g'ri yoki fayl yo'q. src atributida to'g'ri yo'l yozilganini tekshiring. Rasm fayl HTML bilan bir papkada yoki to'g'ri relative path ishlatilganini tasdiqlang."
+  },
+  {
+    "faq_id": 195,
+    "question": "raise TypeError(\"Abstract models cannot be instantiated.\") TypeError: Abstract models cannot be instantiated. shunday xato chiqyapti",
+    "answer": "Abstract model dan to'g'ridan-to'g'ri object yaratish mumkin emas. Abstract modeldan inherit qilib yangi model yarating, keyin o'sha modeldan object yaratishingiz mumkin."
+  },
+  {
+    "faq_id": 196,
+    "question": "Assalomu alaykum, quyidagicha xatolik yuz bermoqda. CustomUser model bilan Profile modelni bog'lashda OneToOne relationship'dan foydlandim. View qismida user.profile degan query ishlamayapti",
+    "answer": "related_name qo'shing: OneToOneField(User, related_name='profile'). Har bir user uchun profile mavjudligini tekshiring. Agar yo'q bo'lsa, signal orqali avtomatik yaratish setup qiling."
+  },
+  {
+    "faq_id": 197,
+    "question": "savol Assalomu Alaykum! bu muammoni chromedan qanday to'g'irlasam bo'ladi ya'ni app security degan bo'lim chiqmayapti",
+    "answer": "Chrome da Settings > Privacy and security > Security > Manage certificates. Yoki myaccount.google.com/security ga kiring. 2-Step Verification sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 198,
+    "question": "Assalomu alaykum! rasmda bitta productni detaili ko'rsatilgan. Productlar categorylarga tegishli. Shunga ko'ra ularning propertylari ham har xil. Bu holatda ham siz qilgandek, har bir property uchun alohida model qilinadimi productga bog'lab, yoki categoryga bog'lanadimi?",
+    "answer": "JSONField ishlatib dynamic properties saqlang. Yoki ProductAttribute model yaratib ManyToMany qiling. Yoki django-eav2 paketidan foydalaning - bu EAV pattern uchun."
+  },
+  {
+    "faq_id": 199,
+    "question": "ahoastga joylaganimda rasm chiqmayapti media rootni videoga o'xshash qilib ham basedir ham qildim lekin natija yo'q",
+    "answer": "Nginx config da media location qo'shing: location /media/ { alias /path/to/media/; }. MEDIA_URL va MEDIA_ROOT to'g'ri sozlanganini tekshiring. Nginx restart qiling."
+  },
+  {
+    "faq_id": 200,
+    "question": "Assalomu alaykum Men django arxiv darslarini ko'rayotgan edim. Men post qo'yish uchun sahifa yaratishni video darsni ko'rib chiqdim. Lekin title va body va author chiqmayabdi nima qilsa bo'ladi terminalda xatolik ko'rsatmayabdi",
+    "answer": "View da context to'g'ri uzatilganini tekshiring. Template da {{ post.title }}, {{ post.body }} to'g'ri yozilganini tasdiqlang. QuerySet bo'sh emasligini shell da tekshiring."
+  },
+  {
+    "faq_id": 201,
+    "question": "Assalomu Aleykum, Iltimos yordam berib yuboringlar. JavaScript domi boshlang'ich holatda turibdi, kodni davom ettirib beringlar, shu kodni to'g'ri ishlaydigan qilib yoza olmayapman. 3 ta buttonlardan biri bosilganda boshqa HTML filesiga o'tadigan qilib JavaScript kodini yozish kerak.",
+    "answer": "document.getElementById('all').addEventListener('click', () => window.location.href = 'all.html'); Xuddi shunday 'websites' va 'contacts' uchun ham yozing. Yoki onclick='location.href=\"all.html\"' HTML da to'g'ridan-to'g'ri ishlating."
+  },
+  {
+    "faq_id": 203,
+    "question": "assalom aleykum. Jetbrains kuponini faollashtirish bo'lmayapdi.",
+    "answer": "JetBrains account ga login qiling. License > Add License > Activation code kiriting. Muddati tugamagan va to'g'ri kupon ekanligini tekshiring. Support ga murojaat qiling."
+  },
+  {
+    "faq_id": 204,
+    "question": "shartmas, hashtaglardan foydalaning",
+    "answer": "Bu savol emas, eslatma. Guruh qoidalariga rioya qiling."
+  },
+  {
+    "faq_id": 205,
+    "question": "django.db.utils.OperationalError: connection to server at port 5432 failed: Cannot assign requested address shunday xatolik chiqyapti",
+    "answer": "PostgreSQL settings.py da HOST ni 'localhost' yoki '127.0.0.1' qilib o'zgartiring. PostgreSQL service ishlab turganini tekshiring. Firewall PostgreSQL portini bloklayotgan bo'lishi mumkin."
+  },
+  {
+    "faq_id": 206,
+    "question": "Assalomu alaykum DRF darslarini ohiridagi MOCK Task ishlash da kompyuterim PostgreSQL ni Support qilmaydigan edi shuning uchun Default db da ishlab chiqdim bu inobatga olinadimi.",
+    "answer": "SQLite ishlatganingiz muammo emas. PostgreSQL bilganingizni aytib o'ting. Production da PostgreSQL ishlatilishi kerakligini tushunganingizni ko'rsating. Kod bir xil ishlashi kerak."
+  },
+  {
+    "faq_id": 207,
+    "question": "lar ignore qilishyapti, javob yo'q",
+    "answer": "Savol to'liq emas. Kimlar ignore qilayotganini va qaysi muammo haqida gapirayotganingizni aniq yozing."
+  },
+  {
+    "faq_id": 208,
+    "question": "Advanced Filtering: va Caching: Integrate caching mechanisms to improve the performance of frequently requested API endpoints, haqida foydali manbalar bo'lsa ulashaolasizmi",
+    "answer": "Django Caching: docs.djangoproject.com/en/stable/topics/cache/. DRF filtering: django-filter dokumentatsiyasi. Redis uchun django-redis. Real Python da caching tutorials bor."
+  },
+  {
+    "faq_id": 209,
+    "question": "shunday xatolik chiqyapti",
+    "answer": "Xato xabarini yuboring, yordam beraman."
+  },
+  {
+    "faq_id": 210,
+    "question": "404 Page ni siteda ochganda about bo'limi takrorlanib chiqmoqda 404 html chiqara olmadim yordam berib yuboring",
+    "answer": "settings.py da DEBUG=False qiling va handler404 sozlang: handler404 = 'app.views.custom_404'. 404.html template yarating. ALLOWED_HOSTS to'g'ri sozlang."
+  },
+  {
+    "faq_id": 211,
+    "question": "Assalomu alaykum hammaga amazon s3 storage dan joy olmoqchi edim aws dan ro'yxatdan o'tishda hech ham o'tib bo'lmayabdi sizlar qanday ishlatasizlar yoki uzb nomeri o'tmaydimi bunda",
+    "answer": "AWS credit/debit card talab qiladi. O'zbekiston kartasi ishlamasa, virtual karta (Uzcard/Humo virtual) sinab ko'ring. Alternatif: Cloudinary, DigitalOcean Spaces, Backblaze B2."
+  },
+  {
+    "faq_id": 212,
+    "question": "registerni test qilsam xato qaytaryapti",
+    "answer": "Xato xabarini ko'rsating. Form validatsiyasi, serializer, yoki view qaysi qismda xato berayotganini aniqlang. Testda to'g'ri ma'lumot yuborganingizni tekshiring."
+  },
+  {
+    "faq_id": 213,
+    "question": "Bosh sahifada yangiliklarni kategoriya bo'yicha ko'rsatish 1-qism shu video orqali: src ={{ news.image.url}} command ishlamayapdi nima qilsa bo'ladi",
+    "answer": "{% load static %} qo'shing. MEDIA_URL sozlang. urls.py da media files uchun pattern qo'shing: + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT). Image field to'g'ri saqlangan ekanligini tekshiring."
+  },
+  {
+    "faq_id": 214,
+    "question": "bu qism ishlamayapti",
+    "answer": "Qaysi qism ishlamayotganini aniq yozing. Kod va xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 215,
+    "question": "assalom aleykum hammaga ubuntu 22.04 versiyasini ustanovka qildim kim qanaqasini ishlatadi ubuntu main yoki ubuntu pro?",
+    "answer": "Ubuntu Main yetarli. Ubuntu Pro korporativ support va qo'shimcha security features beradi. Shaxsiy foydalanish uchun Main versiya to'liq kifoya."
+  },
+  {
+    "faq_id": 216,
+    "question": "Bu xato nima sababdan chiqdi",
+    "answer": "Xato xabarini yuboring, sabab va yechimini aytib beraman."
+  },
+  {
+    "faq_id": 217,
+    "question": "aniqroq tushuntira olasizmi",
+    "answer": "Qaysi qismni tushuntirish kerakligini aniq yozing. Savol kontekstini bering."
+  },
+  {
+    "faq_id": 218,
+    "question": "accounts/ : path('logout/', LogoutView.as_view(http_method_names=['get', 'post', 'options']), name='logout') shuni kiritdim ishladi",
+    "answer": "Yaxshi, lekin best practice: LogoutView faqat POST qabul qilishi kerak. GET orqali logout xavfsizlik muammosi. Template da form ishlatishingiz kerak."
+  },
+  {
+    "faq_id": 219,
+    "question": "Assalomu alaykum Django va DRF orqali qanday qilib multiple file yuklaydigan API yozsa bo'ladi shuni tushuntirib yuboring Djangodagi FileField multiple file qabul qilmas ekan",
+    "answer": "Alohida File/Image model yaratib ForeignKey qiling asosiy modelga. View da request.FILES.getlist('files') bilan listni oling va loop bilan har birini save qiling. Yoki django-multiupload ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 220,
+    "question": "loyihani topshirishda (zip fayl va link so'raydi) o'sha link yoziladigan joyga nimani linkini yozamiz ???",
+    "answer": "GitHub repository linki yoki deployed sayt linki. Agar deploy qilmagan bo'lsangiz, GitHub repo linkini yuboring. README.md da loyiha haqida ma'lumot yozing."
+  },
+  {
+    "faq_id": 221,
+    "question": "Assalomu alaykum. modeldagi m2m fieldni eski qiymatlarni clear() qilib yangi qiymat yozayotganda shunday error beryapti. kimdir shunday xatoga duch kelganmi? qanday fix qilsa bo'ladi?",
+    "answer": "instance.responsibles.set([new_values]) ishlatib ko'ring, clear() keyin add() o'rniga. Yoki save() dan keyin m2m update qiling. Transaction ichida bajarilayotganini tekshiring."
+  },
+  {
+    "faq_id": 222,
+    "question": "Assalomu alaykum yaxshimisizlar Men kursni o'rganishni 4 oyidaman oxirgi paytlarda dangasalik zerikish tufayli darslarni reja qilganimdan o'tkazib yuboriyapman. Sizlarda ham shunday holat bo'lgan bo'lsa nima tavsiya berasizlar",
+    "answer": "Kichik loyihalar qiling - bu motivatsiya beradi. Kuniga 30 daqiqa belgilang, ko'p emas. Coding challenge platformalari (LeetCode, HackerRank) ishlatib o'yin qiling. Community bilan ishlang. Maqsad qo'ying."
+  },
+  {
+    "faq_id": 223,
+    "question": "nega bunday devoti bu",
+    "answer": "Savol aniq emas. Qaysi xato yoki hodisa haqida gapirayotganingizni yozing."
+  },
+  {
+    "faq_id": 224,
+    "question": "Salom. pipenv virtual muhitiga django restframeworkini o'rnatib faylida \"from rest_framework import serializers\" buyrug'ini bersam rest_frameworkini tanimayapti install packagega ham qo'shganman nega bunday bo'layotgan bo'lishi mumkin.",
+    "answer": "pipenv shell aktivatsiya qilinganini tekshiring. pipenv install djangorestframework bajaring. settings.py da INSTALLED_APPS ga 'rest_framework' qo'shilganini tasdiqlang. IDE virtual env ni tanlaganini tekshiring."
+  },
+  {
+    "faq_id": 225,
+    "question": "Assalomu alaykum. Shunga qarab yuboring xatolik berayapti",
+    "answer": "Xato xabarini yuboring, yordam beraman."
+  },
+  {
+    "faq_id": 226,
+    "question": "allauth ni install qilganimdan keyin migratsiya qilguncha shunday xatolik berdi, qanday to'g'irlasam bo'ladi?",
+    "answer": "INSTALLED_APPS da 'django.contrib.sites', 'allauth', 'allauth.account' to'g'ri tartibda qo'shilganini tekshiring. SITE_ID = 1 qo'shing. Keyin python manage.py migrate bajaring."
+  },
+  {
+    "faq_id": 227,
+    "question": ".",
+    "answer": "Savol yo'q. Muammoni yozing."
+  },
+  {
+    "faq_id": 228,
+    "question": "Assalomu alaykum. Oxirgi video suhbatni yozib olgani bo'lsa tashlab olasizmi?",
+    "answer": "Kurs platformasida yozuvlar saqlanishi kerak. Agar yo'q bo'lsa, admin yoki mentor ga murojaat qiling."
+  },
+  {
+    "faq_id": 229,
+    "question": "Assalomu alaykum. Railway da deploy qilguncha mana shunday ko'rsatyapdi va deploy qilmayapdi, qanday to'g'irlasa bo'ladi",
+    "answer": "requirements.txt to'g'riligini tekshiring. Procfile yarating: web: gunicorn project.wsgi. railway.json sozlang. Build logs ni o'qib xatoni aniqlang. Python versiyasini tekshiring."
+  },
+  {
+    "faq_id": 230,
+    "question": "schema to'g'ri yozilgan lekin docsda ko'rsatmayapti",
+    "answer": "drf-spectacular ishlatayotgan bo'lsangiz, SPECTACULAR_SETTINGS to'g'ri sozlanganini tekshiring. Schema generation uchun @extend_schema decorator ishlatilganini tasdiqlang. /api/schema/ endpoint ishlab turganini ko'ring."
+  },
+  {
+    "faq_id": 231,
+    "question": "Kimdir javob beradimi?",
+    "answer": "Savol yozing, yordam beramiz."
+  },
+  {
+    "faq_id": 232,
+    "question": "negadir is_staff bilan is_active tepaga chiqib qoldi lekin kodda boshqacha ko'rsatilgan",
+    "answer": "ModelAdmin da fields yoki fieldsets tartibini to'g'ri sozlang. Form da field_order ishlatishingiz mumkin. CSS bilan tartibni o'zgartirish noto'g'ri - backend dan to'g'rilang."
+  },
+  {
+    "faq_id": 233,
+    "question": "Savolim boridi hozir HTML da Job application yasash darsiga keldim bu yerda o'zi yozsa bo'ladigan bo'sh joy bor u yerga kod yozaymi yoki file jo'nataymi?",
+    "answer": "Vazifa talablarini o'qing. Odatda kod yozib, HTML fayl sifatida yuklashingiz kerak. Zip arxiv qilib barcha fayllarni (HTML, CSS, rasmlar) birga yuboring."
+  },
+  {
+    "faq_id": 234,
+    "question": "Assalamu aleykum JS kursi sabaqlarida amaliyot oz bo'ldi, kurs oxiridagi Amaliy vazifa ga onsha tushinbedim. Usi bilgenlerimiz backend uchun jeterli bo'lama? JS bilimlerdi adimba adim qalay terenirek uyirensek bo'ladi?",
+    "answer": "Backend uchun asosiy JS kifoya. Chuqurroq o'rganish uchun: JavaScript.info saytini o'qing, FreeCodeCamp ni bajaring, kichik loyihalar qiling. DOM, async/await, promises ni chuqur o'rganing."
+  },
+  {
+    "faq_id": 235,
+    "question": "Assalomu aleykum men Mohirdevda IT ga ilk qadam kursi frontend bo'limidagi 2chi darsda Next.js ni terminalda ishlatolmayapman yordamlashib qo'yila",
+    "answer": "npx create-next-app@latest buyrug'ini ishlating. Node.js o'rnatilganini tekshiring: node --version. PATH ga node qo'shilganini tasdiqlang. npm yoki yarn to'g'ri ishlayotganini ko'ring."
+  },
+  {
+    "faq_id": 236,
+    "question": "Assalomu aleykum yaxshimisizlar python rest framework social authentication Google shuni qilib ko'rganlar bormi",
+    "answer": "dj-rest-auth va django-allauth paketlari ishlatiladi. Google OAuth setup qiling. SOCIALACCOUNT_PROVIDERS da google sozlang. Google Console da credentials oling. dj-rest-auth dokumentatsiyasiga qarang."
+  },
+  {
+    "faq_id": 237,
+    "question": "Assalomu alaykum, ahoastga deploy qilayotganda shunday xato kelib chiqdi. Qanday to'g'rilasa bo'ladi? Hostingni eng kichik ta'rifini tanlaganman.",
+    "answer": "RAM yoki disk space yetarli emasligini ko'rsatadi. requirements.txt ni optimallashtiring. Debug=False qiling. Static fayllarni collectstatic qilib CDN ga joylashtiring. Yoki kattaroq tarif tanlang."
+  },
+  {
+    "faq_id": 238,
+    "question": "Assalomu aleykum github eski ishlatilmay yotgan projectni ochib tahlil qilmoqchiman lekin men o'ylagandan qiyinroq ekan qanday projectni to'g'ri o'qish kerakligi bo'yicha maslahat yoki youtube manbalarni birsangiz bering iltimos",
+    "answer": "README.md dan boshlang. requirements.txt va dependencies ni o'rganing. models.py, urls.py, views.py tartibida o'qing. Diagram chizing. Kichik feature qo'shib contribute qiling. YouTube: 'reading django code' qidiring."
+  },
+  {
+    "faq_id": 239,
+    "question": "qalban birga miz usha narsani hardoim deb yozganimda bir o'ylab olardim",
+    "answer": "Bu savol emas, fikr almashish."
+  },
+  {
+    "faq_id": 240,
+    "question": "HTML da faylni VS Code formatta qanday qilib saqlash mumkin",
+    "answer": "File > Save As yoki Ctrl+S (Windows) / Cmd+S (Mac). Format tanlash kerak bo'lsa, 'Save as type' da .html tanlang. Auto-format uchun Shift+Alt+F (Windows) yoki Shift+Option+F (Mac)."
+  },
+  {
+    "faq_id": 241,
+    "question": "endi tokenni yangilash paytida userni topa olmayapti",
+    "answer": "Token valid ekanligini tekshiring. JWT decode qilib user_id borligini ko'ring. Token expiry vaqti o'tmagan ekanligini tasdiqlang. simplejwt settings da USER_ID_FIELD to'g'ri sozlanganini tekshiring."
+  },
+  {
+    "faq_id": 242,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "Web scraping: requests va BeautifulSoup ishlatiladi. import requests; from bs4 import BeautifulSoup; r = requests.get(url); soup = BeautifulSoup(r.text, 'html.parser'). Element selector bilan kerakli ma'lumotni parsing qiling."
+  },
+  {
+    "faq_id": 243,
+    "question": "Assalomu alaykum, saytni AHostga yukladim va Sayt serverda ishlayapti. Lekin media fayllar ko'rinmayapti. Menimcha media URL lar to'g'ri ko'rsatilgan. Lekin rasmlar chiqmayapti.",
+    "answer": "File permissions tekshiring: chmod 755 media papkaga. .htaccess da rewrite rules to'g'ri sozlang. MEDIA_URL '/' bilan tugaganini tasdiqlang. Nginx ishlatayotgan bo'lsangiz, location /media/ {} qo'shing."
+  },
+  {
+    "faq_id": 244,
+    "question": "o'zgaruvchini faqat siklda bir marta ishlatish kerakmi",
+    "answer": "Yo'q, kerak bo'lganda istalgancha ishlatish mumkin. Lekin scope ni tushuning - sikl ichida yaratilgan variable sikl ichida yashaydi. Kerak bo'lsa, sikl tashqarisida declare qiling."
+  },
+  {
+    "faq_id": 245,
+    "question": "Live Server ni install qilsam shu okno chiqdi siladayam chiqqamidi",
+    "answer": "VS Code extension: Live Server ni to'g'ri o'rnatganingizni tekshiring. VS Code ni restart qiling. HTML faylni ochib, pastki o'ng burchakda 'Go Live' tugmasi paydo bo'lishi kerak."
+  },
+  {
+    "faq_id": 246,
+    "question": "Assalomu aleykum men Python Asoslari modulini tugatdim va yakuniy savollarda 1 tadan ko'p variantni tanlash mumkin bo'lgan savollar bor ekan shularda xato belgilab balim pastlab ketdi va modulni tugatib keyingi modulga o'tmoqchi bo'lsam 74 qaytadan boshlash chiqayapti",
+    "answer": "Kurs platformasi support ga murojaat qiling. Test natijalarini ko'rib chiqishni so'rang. Odatda minimal ball yig'sangiz keyingi modulga o'tish mumkin. Qayta topshirishingiz kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 247,
+    "question": "Bu xato nima sababdan chiqdi",
+    "answer": "Xato xabarini yuboring, sabab va yechimini topishga yordam beraman."
+  },
+  {
+    "faq_id": 248,
+    "question": "qanday qilib docker container fileimga kirsam bo'ladi",
+    "answer": "docker exec -it container_name /bin/bash yoki docker exec -it container_name sh bajaring. Container nomi: docker ps bilan toping. Keyin ichida ishlagan shell ochiladi."
+  },
+  {
+    "faq_id": 249,
+    "question": "Assalomu alaykum API chiqargandim bir loyihada cors policy qismidan domenga ruxsat berganman ammo safari brauzerda ma'lumotlarni ola olmayapti front qismi react da buni qanday hal qilsam bo'ladi",
+    "answer": "django-cors-headers sozlamalarida CORS_ALLOWED_ORIGINS to'g'ri yozilganini tekshiring. Safari uchun CORS_ALLOW_CREDENTIALS = True qo'shib ko'ring. OPTIONS request qabul qilinayotganini tasdiqlang. Network tab da CORS xatolarini o'qing."
+  },
+  {
+    "faq_id": 250,
+    "question": "Assalomu alaykum men CSS kursini 18-darsiga keldim va u yerda rasmlar ishlatilgan rasmlarni qaerdan topsam bo'ladi berilgan telegram linkda hech narsa yo'q",
+    "answer": "Kurs platformasida dars ostida 'Resurslar' yoki 'Materiallar' bo'limi bo'lishi kerak. Agar yo'q bo'lsa, mentor yoki support xizmatiga murojaat qiling. Yoki unsplash.com dan bepul rasmlar yuklab olishingiz mumkin."
+  },
+  {
+    "faq_id": 251,
+    "question": "Assalomu alaykum platformada HTML ni tugatgandan keyin vazifa berilgan yani loyiha shuni qilib topshirdim mentor baholashini kutyapmiz degan yozuv chiqdi. Qanchalada taxminan javobi keladi uni?",
+    "answer": "Odatda 3-7 kun ichida javob beriladi. Mentor ish yukiga qarab vaqt farq qilishi mumkin. Sabr qiling, agar 1 haftadan ko'p bo'lsa support ga murojaat qiling."
+  },
+  {
+    "faq_id": 252,
+    "question": "menda db.sqlite3 o'chirib tashasam ham yana qaytib paydo bo'lib qoladi, ustozda bittada o'chdi, 2 marta o'chirdim yana paydo bo'lib qoldi",
+    "answer": "Django server ishlab tursa, sqlite3 avtomatik yaratiladi. Serverni to'xtating, keyin db.sqlite3 ni o'chiring. Agar PostgreSQL ishlatmoqchi bo'lsangiz, settings.py da DATABASE ni o'zgartiring."
+  },
+  {
+    "faq_id": 253,
+    "question": "Assalomu alaykum men Anaconda-Navigator yuklab oldim lekin Spyder yuklay olmayapman Mac ga",
+    "answer": "Anaconda Navigator ochib, Spyder yonidagi Install tugmasini bosing. Yoki terminal da: conda install spyder bajaring. Agar ishlamasa, pip install spyder sinab ko'ring."
+  },
+  {
+    "faq_id": 254,
+    "question": "Assalom alaykum, Menda bir muammo bo'lyapdi. FastAPI bo'limini oxiridagi (Shaxsiy qarzlaringizni kuzatib boruvchi loyiha) qilayotgandim, test yozish kerak ekan, pytest da test yozayabman va bajargan testlarim asosiy database ga saqlanyapdi ma'lumotlari",
+    "answer": "pytest-asyncio va TestClient ishlatib, alohida test database yarating. conftest.py da override_get_db fixture yarating test DB uchun. Yoki in-memory SQLite ishlatishingiz mumkin testlar uchun."
+  },
+  {
+    "faq_id": 255,
+    "question": "Assalomu alaykum, keyingi video chat, domen nomi orqali serverdan elektron pochta yuborish haqida bo'lsin, menda yuborganimda spam qutiga tushib qolyapti",
+    "answer": "SPF, DKIM, DMARC records sozlang. Domain reputation ni oshiring. SMTP server sifatida SendGrid, AWS SES, Mailgun ishlatishni tavsiya qilaman. Email content spammy so'zlardan holi bo'lsin."
+  },
+  {
+    "faq_id": 256,
+    "question": "Salom. Men Postga Comment yozish uchun serializer asosida view yozgandim va post idsiga urldagi post idni biriktirb ketgandim lekin baribir post bo'sh degan xatolik beryapti",
+    "answer": "View da post = get_object_or_404(Post, id=pk) oling. Serializer.save(post=post) qilib save qiling. URL da <int:pk> to'g'ri capture qilinganini tekshiring."
+  },
+  {
+    "faq_id": 257,
+    "question": "belgilagan joyimdagi formani ichidagi jadvalchalarni pastga tushirishga harakat qildim margin-bottom 5px; bilan lekin ishlamadi faqat tepadagilarga ishladi",
+    "answer": "Margin collapse bo'lishi mumkin. padding-bottom sinab ko'ring. Yoki display: block; qo'shing. Brauzer developer tools bilan qaysi element margin qo'shayotganini tekshiring."
+  },
+  {
+    "faq_id": 258,
+    "question": "Assalomu aleykum! Umuman darslik ko'rib bo'lmayapti. tinimsiz o'zini o'zi perezagruzka qivoryapti. Internet tezligim ham yaxshi. Nima qilsam bo'ladi?",
+    "answer": "Brauzer cache va cookies tozalang. Boshqa brauzerda sinab ko'ring. VPN o'chirib ko'ring. Kurs platformasi support ga murojaat qiling - server muammosi bo'lishi mumkin."
+  },
+  {
+    "faq_id": 259,
+    "question": "Assalamu Alaykum Logout qismi ishlamayapti negadir.",
+    "answer": "LogoutView POST metodini talab qiladi. Template da <form method='post'>{% csrf_token %}<button>Logout</button></form> ishlating. urls.py da LogoutView to'g'ri ulangan ekanligini tekshiring."
+  },
+  {
+    "faq_id": 260,
+    "question": "Navigation bilan main-section bir xil joyda qilish kerak",
+    "answer": "CSS da position: absolute yoki fixed ishlatib navigation ni tepa qismga qo'ying. Flexbox ishlatayotgan bo'lsangiz, flex-direction: row; justify-content: space-between; qo'shing."
+  },
+  {
+    "faq_id": 261,
+    "question": "Shu yerdan Live Server iconini o'chirib yuboribman, qanday qilib qo'ysa bo'ladi",
+    "answer": "VS Code da Extensions (Ctrl+Shift+X) ochib, Live Server ni topib Reload/Enable tugmasini bosing. Yoki o'chirib qayta o'rnating: Uninstall > Install."
+  },
+  {
+    "faq_id": 262,
+    "question": "Assalomu alaykum, HTML yakunida bajariladigan topshiriqni yakunlab saytga joylagandim, iltimos tekshirib bering.",
+    "answer": "Tekshirish mentor/instruktor ishi. Platformada topshiriq yuklash joyida submit qiling, avtomatik mentor ga yuboriladi. Feedback kutib turing."
+  },
+  {
+    "faq_id": 263,
+    "question": "Qanday qilib nav bilan brand_nameni 2 tomonga o'tkazsam bo'ladi, 1-ni chapga 2-ni o'nga",
+    "answer": "display: flex; justify-content: space-between; nav ga qo'shing. Yoki float: left; va float: right; ishlatishingiz mumkin. Grid bilan: display: grid; grid-template-columns: auto auto;"
+  },
+  {
+    "faq_id": 264,
+    "question": "Nega background banner to'liq yoyilmayapti",
+    "answer": "background-size: cover; qo'shing. width: 100%; height: 100vh; sozlang. body da margin: 0; padding: 0; mavjudligini tekshiring."
+  },
+  {
+    "faq_id": 265,
+    "question": "Audio yuklanayapdi ammo video yuklanmayapdi teglar to'g'ri yozilgan brauzer ocholmasa xabar berish ishlagani yo'q nimaga bunday bo'lyapdi?",
+    "answer": "Video format brauzer qo'llab-quvvatlamasligi mumkin. MP4 (H.264) ishlatib ko'ring. <source> tagda type atributi to'g'ri ko'rsatilganini tekshiring. File yo'li to'g'riligini tasdiqlang."
+  },
+  {
+    "faq_id": 266,
+    "question": "Shu qiymatlarni berganimdan keyin shunday ko'rinishga keldi, lekin bir xil emasda real site bilan",
+    "answer": "CSS qiymatlarni pixel-perfect sozlang. Brauzer developer tools bilan real saytni inspect qilib, aynan qanday qiymatlar ishlatilganini ko'ring. Font, spacing, color lar aniq mos kelishini tekshiring."
+  },
+  {
+    "faq_id": 267,
+    "question": "Ustoz bitta maslahaatingiz kerak edi hozir menda 25GB atrofda 11 xil turdagi classlar bor uni turini ajratish uchun teachable machine ishlatmoqchi edim lekin juda kattalik qilayapdi mendagi data",
+    "answer": "Teachable Machine cloud da ishlaydi, local dataset kerak emas. Yoki TensorFlow/PyTorch o'rganib custom model train qiling. Google Colab da bepul GPU bilan train qilishingiz mumkin. Roboflow ham yaxshi alternativa."
+  },
+  {
+    "faq_id": 268,
+    "question": "CSS kursdagi amaliy vazifada wave'lar bor uni qaydan olsam bo'ladi?",
+    "answer": "SVG wave generator: getwaves.io, shapedivider.app. Yoki CSS clip-path bilan yasashingiz mumkin. Kurs materiallarida berilgan bo'lishi kerak - dars ostidagi resurslarni tekshiring."
+  },
+  {
+    "faq_id": 269,
+    "question": "3 ta Card o'xshamayapti, qanday qilsa bo'ladi",
+    "answer": "Card larni bir xil height berib, flexbox yoki grid ishlatib align qiling. CSS: display: flex; gap: 20px; va har bir card ga flex: 1; qo'shing. Image sizeni to'g'ri sozlang."
+  },
+  {
+    "faq_id": 270,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "Web scraping uchun: import requests; from bs4 import BeautifulSoup; response = requests.get(url); soup = BeautifulSoup(response.text, 'html.parser'). Kerakli ma'lumotni selector bilan parsing qiling."
+  },
+  {
+    "faq_id": 271,
+    "question": "Bu menimcha JavaScript orqali qilinadi tashlab ketsa bo'ladimi?",
+    "answer": "Ha, interactive elementlar uchun JavaScript kerak. Vazifa talabida JS ishlatish ruxsat berilgan bo'lsa, ishlatishingiz mumkin. Aks holda CSS-only solution topishga harakat qiling."
+  },
+  {
+    "faq_id": 272,
+    "question": "shuni CSS kodi qanday bo'ladi mana bu to'lqin shakldagini nazarda tutyapman",
+    "answer": "SVG wave ishlatib background-image sifatida qo'ying. Yoki clip-path: polygon() ishlatib wave shape yarating. getwaves.io dan tayyor SVG kodni oling."
+  },
+  {
+    "faq_id": 273,
+    "question": "Ustoz Django da videoplayer uchun nimani maslahat berasiz misol uchun kattaroq 2GB video ni admin dan yuklayman desam anchagina vaqt ketib qoladida",
+    "answer": "Video ni to'g'ridan-to'g'ri servega yuklash yomon. AWS S3, Cloudinary, yoki Vimeo/YouTube API ishlatishni tavsiya qilaman. Yoki django-storages bilan cloud storage integrasiya qiling."
+  },
+  {
+    "faq_id": 274,
+    "question": "deployment qila olmadim yordam kerak",
+    "answer": "Qaysi platformaga deploy qilayapsiz? Railway, Render, PythonAnywhere, yoki VPS? Aniq xato xabarini yuboring. requirements.txt, Procfile, static files sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 275,
+    "question": "CSSdagi Amaliy loyiha strukturasi qanday bo'ladi ya'ni nomlari va ketma-ketligi",
+    "answer": "index.html, style.css, images/, fonts/ papkalari. CSS da: reset/normalize, variables, base styles, components, utilities tartibida yoziladi. BEM yoki boshqa naming convention ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 276,
+    "question": "men HTML CSS ta site dizayn yasab yana mobilga API chiqarmoqchi bo'lsam \"detail\": \"CSRF Failed: CSRF token missing.\" deyapti nima bir serverda API va templateni qilsa bo'lmaydimi",
+    "answer": "API uchun @csrf_exempt decorator yoki REST_FRAMEWORK settings da CSRF ni exempt qiling. Yoki mobile dan CSRF token yuboring. Ajratish yaxshi: template uchun session auth, API uchun token auth."
+  },
+  {
+    "faq_id": 277,
+    "question": "Assalomu alaykum yaxshimisizlar menda shunday xatolik chiqayabdi nima qilishni bilmay qoldim yordamlashib yuboringlar",
+    "answer": "Xato xabarini ko'rsating, yordam beraman."
+  },
+  {
+    "faq_id": 278,
+    "question": "Final-bannerim shu ko'rinishga kelgancha shu qiymatlarni berdim. padding berishda noto'g'ri yo'ldan foydalanmaganmanmi? yani juda katta qiymat (280px) bervormaganmanmi?",
+    "answer": "280px katta, lekin dizaynga bog'liq. Responsive bo'lishi uchun % yoki rem ishlatishni tavsiya qilaman. padding: 10rem yoki padding: 15% sinab ko'ring. Media query larda adjust qiling."
+  },
+  {
+    "faq_id": 279,
+    "question": "Yana bir savol bor edi. topshiriqda berilgan saytni scroll qilib pastga tushgan sayin animatsiyalar ishga tushayapti shuni faqatgina HTML va CSS dan foydalanib qilish mumkinmi",
+    "answer": "Yo'q, scroll-based animatsiyalar uchun JavaScript kerak. Intersection Observer API ishlatiladi. CSS animation-timeline eksperimental (limited browser support). JS yozing yoki kutubxona ishlating (AOS.js)."
+  },
+  {
+    "faq_id": 280,
+    "question": "anydisk orqalik kirib yordam bervoring CSS | 42. RWD yordamida loyihani yaxshilash (1-qism) shundan o'tolmayapman",
+    "answer": "Aniq muammoni yozing. Media queries ishlamayaptimi? Responsive design prinsiplarini tushunmayapsizmi? Kod va xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 281,
+    "question": "Assalawma aleykum Python amaliy vazifa da username generator qilishshi funksiya ishleshde foydalanuwshi atin listke o'tkerip awdara almay atirman. str (bir so'zdi) di listke qanday metod bn o'tkeremiz?",
+    "answer": "list(string) - har bir harfni list elementiga aylantiradi. Yoki [char for char in string]. split() bo'sh joy bo'lsa ishlaydi: 'John Doe'.split() => ['John', 'Doe']."
+  },
+  {
+    "faq_id": 282,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "requests.get(url) bilan sahifa HTMLini oling. BeautifulSoup bilan parse qiling. soup.find() yoki soup.select() bilan kerakli elementlarni toping. User-Agent header qo'shish kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 283,
+    "question": "men vdocipherdan API olib ishlayotkandim local hostda API ishlayapti lekin serverga qo'yganimdan keyin shu xato chiqyapti ProxyError occurred",
+    "answer": "Server proxy orqali ishlayotgan bo'lishi mumkin. requests.get(url, proxies={}) bilan proxysiz sinab ko'ring. Yoki server firewall VdoCipher API ga kirishni bloklayotgan bo'lishi mumkin."
+  },
+  {
+    "faq_id": 284,
+    "question": "Assalomu aleykum hammaga. HTML da table qilsak uni ekranni chap yoki o'ng tomonida qilish uchun qaysi tag yoki atributidan foydalanamiz to'liq yozvorila",
+    "answer": "CSS ishlatiladi: table { margin-left: 0; } (chap) yoki table { margin-left: auto; margin-right: 0; } (o'ng). Yoki float: left/right. text-align center ga o'rash uchun."
+  },
+  {
+    "faq_id": 285,
+    "question": "Assalomu aleykum CSS dagi loyihani rasmlarini qayerdan olsa bo'ladi",
+    "answer": "Kurs materiallarida bo'lishi kerak. unsplash.com, pexels.com dan bepul rasmlar. Yoki placeholder.com dan test rasmlari. Dars ostidagi resurslar bo'limini tekshiring."
+  },
+  {
+    "faq_id": 286,
+    "question": "loyihani deploy qilishga yordam bera olasizmi. hozir men arsenalga deploy qilmoqchi edim",
+    "answer": "Arsenal haqida ma'lumot yo'q. Railway, Render, PythonAnywhere, yoki VPS ishlatishni tavsiya qilaman. Aniq qaysi xato chiqayotganini yozing, requirements.txt va sozlamalarni ko'rsating."
+  },
+  {
+    "faq_id": 287,
+    "question": "Live Server juda sekin ishlayapdi, qotib zagruzka bo'lib, nega unday bo'layabdi",
+    "answer": "Loyiha hajmi katta bo'lsa sekinlashadi. Python HTTP server sinab ko'ring: python -m http.server. Yoki brauzer cache tozalang. Extensions ko'p bo'lsa, boshqa extensionlarni o'chiring."
+  },
+  {
+    "faq_id": 288,
+    "question": "Assalom aleykum HTML asoslari oxirida job application da mana shunday muammo bo'lyapti. Validatorda tekshirganda sariq bilan belgilab xatoni ko'rsatyapti lekin qanday qilib to'g'irlashni bilmayapman.",
+    "answer": "Validator xatosini to'liq o'qing. Odatda tag yopilmagan, attribute noto'g'ri, yoki deprecated tag ishlatilgan. w3.org validator aniq qator ko'rsatadi - o'sha qatorni to'g'rilang."
+  },
+  {
+    "faq_id": 289,
+    "question": "Assalomu aleykum, men Ubuntu serveriga loyihamni deploy qildim, firewallda SSH ga taqiq qo'yib yubordim. Endi serverga ulana olmayapman. SSH dan foydalanmasdan serverga qanday kirsa bo'ladi.",
+    "answer": "Cloud provider (DigitalOcean, AWS) console orqali VNC/Serial console kirish. Yoki recovery mode. Agar access yo'q bo'lsa, server ni qayta yaratish kerak bo'ladi. Keyingi safar ehtiyot bo'ling."
+  },
+  {
+    "faq_id": 290,
+    "question": "Assalom alaykum. Pythonda OOP uchun vazifani yuborishdagi format bo'yicha muammo bo'lyapti. Zip qilib tashlay olmayapman",
+    "answer": "Papkani sichqoncha bilan right-click > Send to > Compressed (zipped) folder. Yoki 7-Zip/WinRAR ishlatib .zip arxiv yarating. Linux/Mac da: zip -r file.zip folder/"
+  },
+  {
+    "faq_id": 291,
+    "question": "Assalomu Alaykum! Phonenumbers kutubxonasidan foydalanib, barcha davlat raqamlarini ro'yxatdan o'tkazmoqchiman lekin kodimdagi ayrim xatoliklar tufayli yoki boshqa sabablarga ko'ra boshqa davlat raqamlari ro'yhatdan o'tolmayapti",
+    "answer": "phonenumbers.parse() da region parametrini to'g'ri bering. Har xil formatlarni qo'llab-quvvatlash uchun try-except ishlatib turli region kodlarini sinab ko'ring. International format (+) bilan saqlang."
+  },
+  {
+    "faq_id": 292,
+    "question": "aws ec2 ni ishlatayotgan edim hozir menda quyidagicha IP bor va ahost dan domen olgan edim endi domenni qanday yo'naltirsam bo'ladi yuqorida ko'rsatilgan manzilga",
+    "answer": "aHost DNS settings ga kiring. A record yarating: @ yoki www, value ga EC2 IP manzilini yozing. TTL 3600. Propagatsiya 24 soatgacha vaqt olishi mumkin."
+  },
+  {
+    "faq_id": 293,
+    "question": "vdocipher bilan ishlaganlar bormi yordam kerak edi",
+    "answer": "VdoCipher API dokumentatsiyasiga qarang. OTP (One Time Password) system ishlatadi. API key va video ID kerak. requests bilan API endpoint ga so'rov yuboring. Aniq muammoni yozing."
+  },
+  {
+    "faq_id": 294,
+    "question": "main-section__title bilan <p> tegini orasidagi bo'sh joyni qisqartirib bo'lmayapti.",
+    "answer": "margin yoki padding qo'shilgan. CSS da: h1, h2, h3, p { margin: 0; } qo'shing yoki aniq: .main-section__title { margin-bottom: 10px; }. Brauzer developer tools bilan tekshiring."
+  },
+  {
+    "faq_id": 295,
+    "question": "Savolda sayt qiletganda dizayn ideani qayerdan olamiz yoki kliyent o'zi aytadimi hammasini",
+    "answer": "Kliyent brief beradi. Dizayner Figma/Adobe XD da mockup yasaydi. Yoki dribbble.com, behance.net dan inspiratsiya olasiz. Freelance da kliyent ko'pincha reference sayt beradi."
+  },
+  {
+    "faq_id": 297,
+    "question": "Assalomu aleykum backend qaysi tilda ko'tarilgan asosiy qismi",
+    "answer": "Qaysi backend? Facebook - PHP/Hack, Google - C++/Java/Python/Go, Amazon - Java, Instagram - Python/Django. Har xil backend turli tillar ishlatadi. Python, Java, Node.js, Go, PHP eng mashhur."
+  },
+  {
+    "faq_id": 298,
+    "question": "vdocipherdan foydalangandim shu xato chiqyapti xato qayerdan chiqyatkanini bilmayapman",
+    "answer": "Xato xabarini ko'rsating. API key to'g'riligini tekshiring. Video ID valid ekanligini tasdiqlang. requests.get() response.status_code ni print qilib debug qiling."
+  },
+  {
+    "faq_id": 300,
+    "question": "Formda input tagining qaysi type-i shu suratdagidek sm yoki kg ni ko'rsatib turadi?",
+    "answer": "type='number' ishlatib, keyindan CSS bilan unit qo'shing yoki JavaScript bilan. Yoki <input><span>kg</span> formatida. HTML5 da datalist ishlatib dropdown yaratishingiz mumkin."
+  },
+  {
+    "faq_id": 301,
+    "question": "Yana bir savol bor edi. topshiriqda berilgan saytni scroll qilib pastga tushgan sayin animatsiyalar ishga tushayapti shuni faqatgina HTML va CSS dan foydalanib qilish mumkinmi",
+    "answer": "Yo'q, scroll-based animatsiyalar uchun JavaScript kerak. Intersection Observer API ishlatiladi. CSS animation-timeline eksperimental xususiyat (limited support). AOS.js kabi kutubxona ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 302,
+    "question": "{% for news in news_list %} Usi blockti jazsam janaliqlarni ma'lumotlar bazasinan alalmaydi, error da bermeydi 3 kunnen beri usinin sheshimin tabalmay atirman Ma'lumotlar bazasinan almay tursa qaysi faylda qate bo'ladi?",
+    "answer": "View da context to'g'ri uzatilganini tekshiring: return render(request, 'template.html', {'news_list': news_list}). QuerySet bo'sh emasligini shell da tekshiring: News.objects.all(). Template path to'g'riligini tasdiqlang."
+  },
+  {
+    "faq_id": 303,
+    "question": "Menda ham shunday xatolik bo'layapti. Imglarni ko'rsatmayapti.",
+    "answer": "{% load static %} template boshida yozilganini tekshiring. STATIC_URL va MEDIA_URL sozlang. Image src da {% static 'path' %} yoki {{ object.image.url }} to'g'ri ishlatilganini tasdiqlang."
+  },
+  {
+    "faq_id": 304,
+    "question": "Navbardagi kampaniya nomi bilan menyu yonma yon tushmayapdi va chap va o'ngdan ancha joy qoldiryabdi nega",
+    "answer": "display: flex; justify-content: space-between; navbar ga qo'shing. Yoki float: left va float: right ishlatib ko'ring. padding/margin ni tekshiring. Bootstrap ishlatayotgan bo'lsangiz, d-flex justify-content-between class qo'shing."
+  },
+  {
+    "faq_id": 305,
+    "question": "ko'k background qo'ydim, to'lqinsimon fonni urlda ko'rsattim negadir chiqmadi, va bino rasmini kichraytirsam ko'k fon ham kichrayib ketyabdi",
+    "answer": "background-size: cover; background-repeat: no-repeat; qo'shing. Background image va bino rasmi alohida elementlarda bo'lishi kerak. position: absolute yoki CSS layering ishlatib to'g'rilang."
+  },
+  {
+    "faq_id": 306,
+    "question": "vazifani zip faylini yuklab bo'lmayapti. github repo linki qayerga qo'yiladi?",
+    "answer": "Platformada 'Link' yoki 'GitHub URL' maydoni bo'lishi kerak. Agar yo'q bo'lsa, README.md yoki alohida text file da link qoldiring zip ichida. Support ga murojaat qiling."
+  },
+  {
+    "faq_id": 307,
+    "question": "Assalomu aleykum! Men SQL darsida PostgreSQL ni yuklay olmayapman yordam bering mening komputerim Mac iTerm ga kirsam command not found deyapti \"brew install postgresql\" desam.",
+    "answer": "Homebrew o'rnatilmagan. /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\" bajaring. Keyin brew install postgresql. Yoki postgres.app yuklab oling."
+  },
+  {
+    "faq_id": 308,
+    "question": "Assalom alaykum hammaga OOP bo'yicha vazifani bajardim. Kod ishlayapti ma'lumotlar to'liq chiqyapti. Lekin kodni yuborsam har safar ustozdan to'liq ta'rifni chiqarish kerak degan javob kelyapti.",
+    "answer": "__str__ metodini to'liqroq yozing: return f'{self.name}, {self.age}, {self.address}, {self.phone}'. Barcha muhim attributelarni qo'shing. Vazifa talabini diqqat bilan o'qing - qaysi fieldlar kerak."
+  },
+  {
+    "faq_id": 309,
+    "question": "Assalom alaykum. flexbox elementlarni ikki uch qatorli yoki ustunli qilmoqchi edim. lekin o'xshamayapti? qanday amalga oshirsam bo'ladi",
+    "answer": "flex-wrap: wrap; qo'shing container ga. Har bir element uchun width/flex-basis belgilang: flex: 0 0 33.33%; (3 ustun uchun). gap: 20px; bilan oraliq qo'shing."
+  },
+  {
+    "faq_id": 310,
+    "question": "Assalomu alaykum Nimaga Chrome ga o'tganda YouTube dan bir xil videolarni ochmayapti",
+    "answer": "Bu texnik yordam savoli emas. Brauzer cache tozalang. YouTube account dan logout/login qiling. Extensions ni o'chirib ko'ring. Boshqa brauzerda ishlasa, Chrome ni reinstall qiling."
+  },
+  {
+    "faq_id": 311,
+    "question": "Live Server juda sekin ishlayabdi, qotib zagruzka bo'lib, nega unday bo'layabdi",
+    "answer": "Loyiha hajmi katta bo'lsa sekinlashadi. Python http.server sinab ko'ring: python -m http.server. Brauzer cache tozalang. Ko'p extensionlar o'rnatilgan bo'lsa, kerak emaslarini o'chiring."
+  },
+  {
+    "faq_id": 312,
+    "question": "responsive qilishda tepasi o'xshadi pasti qismi ekran bo'ylab cho'zilmayabdi negadir",
+    "answer": "width: 100%; qo'shing element ga. max-width tekshiring. Flexbox/Grid ishlatayotgan bo'lsangiz, parent container width 100% ekanligini tasdiqlang. Media query to'g'ri yozilganini ko'ring."
+  },
+  {
+    "faq_id": 313,
+    "question": "Shu container ishlamayapti. nimadan bo'lishi mumkin? tushunishga oson bo'lsin deb containerga border va margin yozib olgan edim ishlamayapti",
+    "answer": "CSS selector to'g'ri yozilganini tekshiring. Class/ID nomi to'g'riligini tasdiqlang. CSS fayl HTML ga to'g'ri ulangan ekanligini ko'ring. Brauzer developer tools da CSS applied bo'layotganini tekshiring."
+  },
+  {
+    "faq_id": 314,
+    "question": "trelloda boardni ichida bir nechta listlar joylashgan ekan shu sababdan shu holatda yuklagandim, aksincha bo'lishi keremidi? mentor javobini shu joyiga tushunmadim batafsil aytib berolasizmi?",
+    "answer": "Trello da Board > Lists > Cards strukturasi bo'ladi. Mentor list ichida board yaratgan deyapti ekan - bu noto'g'ri. Alohida board yarating, ichiga listlar qo'shing."
+  },
+  {
+    "faq_id": 315,
+    "question": "Update berganimda chiqyapti",
+    "answer": "Xato xabarini ko'rsating. Qaysi model update qilayotganingizni va qaysi field ga xato berayotganini yozing."
+  },
+  {
+    "faq_id": 316,
+    "question": "assalomu alaykum! SQL ni ishga tushirish uchun nima qilish kerak",
+    "answer": "PostgreSQL o'rnatilganini tekshiring. Service ishga tushiring: Windows - services.msc > PostgreSQL start, Linux - sudo systemctl start postgresql. psql -U username -d database_name bilan kirish."
+  },
+  {
+    "faq_id": 317,
+    "question": "frontend bo'yicha Ulug'bek Samigjonov darslari yetarlimi qo'shimcha ma'lumot izlash shart emasmi. Asosan backend dasturlashga qiziqaman. Python SQL bilaman. HTML CSS boshlang'ich bilaman",
+    "answer": "Backend uchun asosiy HTML/CSS/JS kifoya. Qo'shimcha: JavaScript.info o'qing, Flexbox/Grid chuqur o'rganing. Backend focus bo'lsangiz, React/Vue o'rganmasangiz ham bo'ladi - Django templates yetarli."
+  },
+  {
+    "faq_id": 318,
+    "question": "Assalomu alaykum. CSS kurs oxiridagi loyihani pricing, contact, about page larini ham qilish kerakmi yoki faqat landing page ni o'zi?",
+    "answer": "Vazifa talablarini o'qing. Odatda faqat landing page kerak. Agar boshqa page lar talab qilingan bo'lsa, vazifa tavsifida yozilgan bo'ladi."
+  },
+  {
+    "faq_id": 319,
+    "question": "Assalawma aleykum .env ni jazip bo'lip, runserver qilsam shunday bo'lip tur (UnicodeDecodeError: 'utf-8' codec can't decode byte 0xdd in position 61: invalid continuation byte) qalay tuwirlaymiz?",
+    "answer": ".env faylda kirilcha yoki maxsus belgilar bo'lishi mumkin. UTF-8 encodingda saqlang. Notepad++ yoki VS Code da encoding ni UTF-8 qilib o'zgartiring. Secret key ni ASCII belgilar bilan qayta generate qiling."
+  },
+  {
+    "faq_id": 320,
+    "question": "shu kod ishlamayabdi console da raqamni o'rniga \"${number} is even\" shu chiqyabdi qanaqdur xato bormi",
+    "answer": "Backtick (`) ishlatish kerak, qo'shtirnoq emas. To'g'risi: console.log(`${number} is even`). Single/double quotes string interpolation qilmaydi."
+  },
+  {
+    "faq_id": 321,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "import requests; from bs4 import BeautifulSoup; response = requests.get(url); soup = BeautifulSoup(response.text, 'html.parser'). Element selector bilan kerakli ma'lumotni parsing qiling. User-Agent header qo'shish kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 322,
+    "question": "assalomu alaykum, custom user model orqali qanday qilib authentication qilinadi using jwt token",
+    "answer": "simplejwt ishlatib, settings.py da AUTH_USER_MODEL = 'app.CustomUser' sozlang. Serializer da User modeli to'g'ri ko'rsatilganini tekshiring. TokenObtainPairView ishlatib token oling."
+  },
+  {
+    "faq_id": 323,
+    "question": "Savolim bor edi Bootstrapda ishlayotganimdan beri hamma xususiyatlar ishlayotgan edi, lekin dars o'rtalarida (ba'zi bir mavzular) dagi componentlar ishlamayapti, hususan scrollspy da focus bo'lib 1-dan 2-ga o'tmayapti, dropdown button, va menular, modallar ham",
+    "answer": "Bootstrap JS to'g'ri ulanganini tekshiring. Popper.js kerak bo'ladi - CDN da ikkalasi ham bo'lishi kerak. data-bs-* atributlari to'g'ri yozilganini tasdiqlang. Brauzer console da JS xatolarini ko'ring."
+  },
+  {
+    "faq_id": 324,
+    "question": "omborxona mock testida yordamingiz kerak. requestda 1 ta product code va quantity yuboriladi, lekin responseda 2ta product uchun ma'lumot kelyapti. Shu yeriga tushuntirish bering",
+    "answer": "View da filter to'g'ri qo'llanilganini tekshiring: Product.objects.filter(code=product_code).first(). Serializer da nested data qaytarilayotgan bo'lishi mumkin. API logic ni debug qilib, qayerdan 2 ta product kelib chiqayotganini toping."
+  },
+  {
+    "faq_id": 325,
+    "question": "Assalomu alaykum! Shu kodda dblclick dan hech qanday reaksiya qaytmayapti. oddiy clickda ishlayapti.",
+    "answer": "addEventListener('dblclick', function) sintaksi to'g'riligini tekshiring. onclick atributi dblclick ni override qilayotgan bo'lishi mumkin. Event listener to'g'ri attach qilinganini console.log bilan tekshiring."
+  },
+  {
+    "faq_id": 326,
+    "question": "DRF kursida Modelda email_phone_number maydoni yo'q Shuning uchun User() got unexpected keyword arguments: 'email_phone_number' qaytaryapti",
+    "answer": "Serializer da fields to'g'ri ko'rsatilganini tekshiring. Model ga email_phone_number field qo'shing yoki serializer dan o'sha fieldni olib tashlang. Migration qilishni unutmang."
+  },
+  {
+    "faq_id": 327,
+    "question": "Assalomu Alaykum HTML vazifasi uchun testda Birth Date bo'limida Select orqali yozib option valuelariga oylarni yozib chiqsam bo'ladi. Ammo kun yoki yillarga kelganda misol yil uchun 100 ta options yozishga to'g'ri kelarkan.",
+    "answer": "type='date' input ishlatishingiz mumkin - brauzer avtomatik calendar beradi. Yoki JavaScript bilan dynamic option generate qiling. HTML5 datalist ham alternativa."
+  },
+  {
+    "faq_id": 328,
+    "question": "Assalawma aleykum Shunday AttributeError ko'rsetip tur. Qalay tuwirlaymiz? AttributeError: module 'django.db.models.functions.datetime' has no attribute 'now'",
+    "answer": "from django.utils import timezone; timezone.now() ishlatiladi. django.db.models.functions.datetime.now() noto'g'ri. To'g'risi: from django.utils.timezone import now"
+  },
+  {
+    "faq_id": 329,
+    "question": "topshiriqda nimani so'raganiga tushunmadim",
+    "answer": "Vazifa tavsifini diqqat bilan qayta o'qing. Aniq qaysi qismiga tushunmayotganingizni yozing. Mentor yoki kurs support ga murojaat qiling."
+  },
+  {
+    "faq_id": 330,
+    "question": "Assalawma aleykum Mock Task tapsirmani orinlawda logikasin jaziwga qiynalip atirman. Jol joba aytsaniz Jardem bereasizba?",
+    "answer": "Muammoni bosqichma-bosqich yechib chiqing: 1) Ma'lumotlarni o'qish 2) Kerakli logic yozish 3) Natijani qaytarish. Pseudocode yozing. Aniq qaysi qismi qiyin ketayotganini yozing, yordam beraman."
+  },
+  {
+    "faq_id": 331,
+    "question": "Amaliy loyihani Animatsiyasi CSS orqali qilish mumkinmi? Animatsiya lari orqali topshirish kerak mi",
+    "answer": "CSS animations ishlatishingiz mumkin: @keyframes, transition, transform. Vazifa talablarini o'qing - agar animatsiya talab qilingan bo'lsa, CSS yoki JS bilan qiling. Scroll animatsiyalar uchun JS kerak."
+  },
+  {
+    "faq_id": 332,
+    "question": "Assalomu aleykum men Mohirdevda IT ga ilk qadam kursi frontend bo'limidagi 2chi darsda Next.js ni terminalda ishlatolmayapman yordamlashib qo'yila",
+    "answer": "Node.js o'rnatilganini tekshiring: node --version. npx create-next-app@latest bajaring. PATH ga node qo'shilganini tasdiqlang. npm yoki yarn to'g'ri ishlayotganini ko'ring."
+  },
+  {
+    "faq_id": 333,
+    "question": "Nega cardlarga col-6 berilgan bo'lsa ham 2 ta qatorda 2 tadan emas, 1ta qatorda 4 ta chiqyapti. izoh: Chunki 6 dan bersa 12/6=2 tadan tushmaydi mi.",
+    "answer": "Row ichida turganini tekshiring. col-6 12 griddan 6 ni egallaydi - 2 ta card bo'lishi kerak. width yoki padding override qilinyotgan bo'lishi mumkin. Brauzer developer tools bilan tekshiring."
+  },
+  {
+    "faq_id": 334,
+    "question": "qanday qilib zip fayl qiladi o'rgatvorila",
+    "answer": "Windows: papka ustida right-click > Send to > Compressed (zipped) folder. Mac: right-click > Compress. Linux: zip -r archive.zip folder/. 7-Zip yoki WinRAR ham ishlatishingiz mumkin."
+  },
+  {
+    "faq_id": 335,
+    "question": "Assalomu alaykum. Postga aloqador kommentlarni ko'rish imkoni yo'q deb javob berilgan. Lekin kommentlarni chiqaradigan kod yozganman va ishlayaptiku.",
+    "answer": "Mentor feedback noto'g'ri yoki vazifa talabini to'liq bajarmagan bo'lishingiz mumkin. Screenshot va kod bilan qayta murojaat qiling. Barcha test case lar ishlayotganini ko'rsating."
+  },
+  {
+    "faq_id": 336,
+    "question": "модулдаги видеолар ютубда бор экан ку нимага пул тўладик?",
+    "answer": "Kurs strukturasi, materiallar, mentor support, sertifikat, vazifalarni tekshirish uchun to'lanadi. YouTube da faqat video bor, to'liq kurs tajribasi yo'q."
+  },
+  {
+    "faq_id": 337,
+    "question": "Assalomu alaykum yaxshimisiz men registratsiyadan so'ng har bir klient uchun jsni kutubxonasini ishlatib QR Code generatsiya qilsa bo'ladimi va qanda",
+    "answer": "Ha, qrcode.js yoki kjua ishlatishingiz mumkin. Backend da Python qrcode kutubxonasi ham bor. User uchun unique data (ID, link) generate qiling va QR ga encode qiling. Image sifatida saqlang yoki dinamik ko'rsating."
+  },
+  {
+    "faq_id": 338,
+    "question": "Assalomu Alaykum SQL ga boshqa database ni qanday ulasam bo'ladi error beryapti terminalda",
+    "answer": "psql -U username -d database_name bilan ulaniladi. Agar database yo'q bo'lsa: CREATE DATABASE dbname; psql da bajaring. Connection string to'g'riligini tekshiring. PostgreSQL service ishlab turganini tasdiqlang."
+  },
+  {
+    "faq_id": 339,
+    "question": "assalom aleykum web saytimni AHOST serverga yukladim serverda DEBUG=True holatida ishlayabdi DEBUG=False holatida ishlamayabdi yani rasmlar chiqmayabdi",
+    "answer": "python manage.py collectstatic bajaring. STATIC_ROOT to'g'ri sozlang. .htaccess da static va media uchun alias qo'shing. ALLOWED_HOSTS ga domen qo'shing."
+  },
+  {
+    "faq_id": 340,
+    "question": "<img class=\"service-card__icon\" src=\"./images/service-1.png\" alt=\"Service 1\"> iconni yuklamayabdi",
+    "answer": "Fayl yo'li to'g'riligini tekshiring. images papka HTML bilan bir joyda turganini tasdiqlang. Fayl nomi va kengaytmasi to'g'ri yozilganini ko'ring. Brauzer console da 404 xatosi borligini tekshiring."
+  },
+  {
+    "faq_id": 341,
+    "question": "Assalomu alaykum shunga bir javob berib yuborolasizmi",
+    "answer": "Savol yozing, javob beraman."
+  },
+  {
+    "faq_id": 342,
+    "question": "Assalomu alaykum, image-ni qanday qilib rotate qilish mumkin 360 gradusga?",
+    "answer": "CSS: @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } img { animation: rotate 2s linear infinite; }. JavaScript bilan ham qilish mumkin."
+  },
+  {
+    "faq_id": 343,
+    "question": "Assalomu aleykum HTML darsida Google Chrome ni noutbookimga o'rnata olmayapman saytdan skachat qilganimda Yandeks ni ko'rsatyapti shunga yordam bering oldindan rahmat",
+    "answer": "google.com/chrome ga to'g'ridan-to'g'ri kiring. Download tugmasini bosing. Setup file ni ishga tushiring. Windows Defender yoki antivirus bloklayotgan bo'lishi mumkin."
+  },
+  {
+    "faq_id": 344,
+    "question": "Assalomu alaykum yaxshimisiz. Menga yordamiz kerak edi. 1 saytdan ma'lumot olishda muammo bo'lyapti yordam berasizmi",
+    "answer": "requests va BeautifulSoup ishlatiladi: response = requests.get(url); soup = BeautifulSoup(response.text, 'html.parser'). Kerakli elementni soup.find() yoki soup.select() bilan oling."
+  },
+  {
+    "faq_id": 345,
+    "question": "yozuvni katta qila olmadim va tepadagi main-navigation ni ham olmadim yordam berib yuboring",
+    "answer": "font-size: 24px; yoki font-size: 2rem; ishlatib yozuvni kattalashtiring. Navigation uchun flexbox yoki grid ishlatib layout qiling. HTML struktura va CSS kodini ko'rsating."
+  },
+  {
+    "faq_id": 346,
+    "question": "Manashu erda nima xato borligini tushuntira olasizmi, left va right tomonlarga padding beryapman, ammo brauzerda bir biridan ajralmayapti",
+    "answer": "padding-left va padding-right syntax to'g'riligini tekshiring. Brauzer developer tools bilan padding apply bo'layotganini ko'ring. Parent container width yetarli ekanligini tasdiqlang."
+  },
+  {
+    "faq_id": 347,
+    "question": "MacOSdagi commandalar Windowsda ishlamayapti nima qilay",
+    "answer": "Command ekvivalentini ishlating: ls -> dir, clear -> cls, cp -> copy, mv -> move. Git Bash o'rnatib Unix commandalarni Windows da ishlatishingiz mumkin. PowerShell ham yaxshi alternativa."
+  },
+  {
+    "faq_id": 348,
+    "question": "men django projectimni dockerga o'tkazgandim o'zimda celery bilan emailga xabar jo'natish ishlayotgandi dockerga o'tkazganimdan keyin ishlamay qoldi",
+    "answer": "docker-compose.yml da celery service to'g'ri sozlanganini tekshiring. Celery broker (Redis/RabbitMQ) container ishlab turganini tasdiqlang. Environment variables to'g'ri pass qilinganini ko'ring. Celery logs ni tekshiring."
+  },
+  {
+    "faq_id": 349,
+    "question": "Assalawma aleykum order_routes response qaytarmayatir sebebi ne bo'liwi mumkin? auth_routes islep tur",
+    "answer": "Route to'g'ri register qilinganini tekshiring. Return statement mavjudligini tasdiqlang. Xato xabarini ko'rsating. Console logs bilan debug qiling - function chaqirilayotganini tekshiring."
+  },
+  {
+    "faq_id": 350,
+    "question": "qanday qilib githubdan student packni olishim mumkin, menga 2 marta reject keldi",
+    "answer": "Universitet emaili ishlatib ariza bering. Student ID yoki transcript yuklang. Foto aniq va o'qiladigan bo'lishi kerak. education.github.com/pack da batafsil instructions bor. 3-4 hafta kutish kerak bo'lishi mumkin."
+  },
+  {
+    "faq_id": 351,
+    "question": "hozir bitta zakaz olgandim kino kodi bot aiogram da yozdim baza postgresql da. Git gubga yukladim. Endi deploy qilish kerak. Postgresql baza ni serverga qoʻyish kerak shuni tushunmayapman bugun hal qilib berishim kerak yordam bering",
+    "answer": "Deploy qilishda odatda PostgreSQL bazani alohida server yoki cloud service’da (Railway, Supabase, Render, Neon) ochasiz. Bot serverga joylangach, database connection string’ni `.env` orqali berasiz. Lokal bazani serverga ko‘chirish uchun `pg_dump` va `pg_restore` ishlatiladi."
+  },
+  {
+    "faq_id": 352,
+    "question": "billing informationni toʻldirib joʻnatganimdan keyin kelgan reject bu",
+    "answer": "Billing reject bo‘lishiga odatda karta ma’lumotlari, ism-familiya mos kelmasligi yoki bank cheklovlari sabab bo‘ladi. Billing ma’lumotlarini karta egasining haqiqiy ma’lumotlari bilan qayta tekshirib yuboring yoki bankdan aniqlashtiring."
+  },
+  {
+    "faq_id": 353,
+    "question": "Djangoda celery ishlatganda taskni appga bog'lashdan nima foyda?",
+    "answer": "`@app.task` bilan taskni aniq Celery instance’ga bog‘laysiz. Bu konfiguratsiya, routing va monitoringni boshqarishni osonlashtiradi. Global task ishlaydi, lekin katta loyihalarda appga bog‘lash tartibli va xavfsizroq."
+  },
+  {
+    "faq_id": 354,
+    "question": "vs code yuklagan edim login surayapti nima qilishim kerak",
+    "answer": "VS Code login so‘rashi GitHub yoki Microsoft account bilan sinxronizatsiya uchun. Agar kerak bo‘lmasa, login qilmasdan ham ishlatishingiz mumkin yoki oynani yopib davom eting."
+  },
+  {
+    "faq_id": 355,
+    "question": "landing page da new posts, popular by views, week/month popular postsni qanday chiqarish mumkin?",
+    "answer": "Buning uchun post modeliga `views`, `created_at` kabi maydonlar qo‘shiladi. Django’da `order_by`, `filter` va `annotate` yordamida alohida query’lar yozib, template’ga uzatasiz."
+  },
+  {
+    "faq_id": 356,
+    "question": "Django Rest Frameworkda qilingan backendni FastAPI’da ham yozsa bo‘ladimi?",
+    "answer": "Ha, bo‘ladi. FastAPI tezroq va async ishlaydi. Lekin DRF’da tayyor admin va auth qulayliklari ko‘proq. Tanlov loyiha talabi va jamoaga bog‘liq."
+  },
+  {
+    "faq_id": 357,
+    "question": "mana shu savolga qaysi bo‘ladi",
+    "answer": "Savol aniq emas. Qaysi texnologiya yoki vazifa haqida ekanini batafsil yozsangiz, to‘g‘ri yo‘nalish berish mumkin."
+  },
+  {
+    "faq_id": 358,
+    "question": "fastapi loyihasini run qilganda muammo bo‘layapti",
+    "answer": "FastAPI’da muammo ko‘pincha `uvicorn` noto‘g‘ri ishga tushirilgani yoki import xatolar sabab chiqadi. Terminaldagi error matnini tekshirib, `uvicorn main:app --reload` formatida ishga tushiring."
+  },
+  {
+    "faq_id": 359,
+    "question": "shu xatolikni to'g'rilolmayapman",
+    "answer": "Xatolik matnisiz aniqlash qiyin. Error matnini yoki screenshotni yuborsangiz, sababini aniqlab berish mumkin."
+  },
+  {
+    "faq_id": 360,
+    "question": "truncatewords ishlamayapti",
+    "answer": "Django’da `truncatewords` ishlashi uchun template’da `{% load humanize %}` yoki `{% load static %}` emas, `{% load humanize %}` qo‘shilganini tekshiring."
+  },
+  {
+    "faq_id": 361,
+    "question": "faqat home sahifasi ishlamayapti",
+    "answer": "Bu holat ko‘pincha URL routing yoki template nomi xato bo‘lganda chiqadi. `urls.py` va view nomlari mos kelayotganini tekshiring."
+  },
+  {
+    "faq_id": 362,
+    "question": "display:flex berganda elementlar blocka o‘tib ketyapti",
+    "answer": "`display:flex` berilgan container ichidagi elementlarga `flex-wrap`, `width` yoki `flex-basis` noto‘g‘ri berilgan bo‘lishi mumkin. CSS’ni inspect orqali tekshirib chiqing."
+  },
+  {
+    "faq_id": 363,
+    "question": "DRF serializer DBga yana so‘rov yuboradimi?",
+    "answer": "Yo‘q, serializer siz bergan queryset bilan ishlaydi. Agar `SerializerMethodField` yoki nested serializer bo‘lsa, qo‘shimcha query bo‘lishi mumkin."
+  },
+  {
+    "faq_id": 364,
+    "question": "width 100% bo‘lsa ham layout buzilyapti",
+    "answer": "Bu holat ko‘pincha parent elementda `max-width` yoki `overflow` cheklovi borligi sabab bo‘ladi. `box-sizing: border-box` ham tekshirib ko‘riladi."
+  },
+  {
+    "faq_id": 365,
+    "question": "ISP managerda python telegram botni webhook qilish",
+    "answer": "Webhook qilish uchun SSL sertifikat, public domain va Flask/FastAPI endpoint kerak. ISP manager’da Python app yaratib, webhook URL’ni Telegram botga berasiz."
+  },
+  {
+    "faq_id": 366,
+    "question": "railwayda deploydan keyin crashed bo‘lyapti",
+    "answer": "Crashed bo‘lishiga env variables yo‘qligi, noto‘g‘ri start command yoki port xatolari sabab bo‘ladi. Railway loglarini tekshiring."
+  },
+  {
+    "faq_id": 367,
+    "question": "container bilan layout buzilyapti",
+    "answer": "Navbar va main’ni bir xil containerga solganda shadow va overflow muammolari chiqishi mumkin. Navbar’ni tashqi wrapperda qoldirish tavsiya etiladi."
+  },
+  {
+    "faq_id": 368,
+    "question": "navbar va about me responsive muammo",
+    "answer": "Bu muammo odatda `flex` yoki `grid` noto‘g‘ri ishlatilganda chiqadi. Media query va `flex-wrap` sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 369,
+    "question": "yaratilgan deyabdimi?",
+    "answer": "Bu xabar odatda obyekt muvaffaqiyatli yaratilganini bildiradi. Ammo natijani admin panel yoki bazadan tekshirib ko‘rish kerak."
+  },
+  {
+    "faq_id": 370,
+    "question": "postgres ownerda bo‘lib tursa bo‘ladimi?",
+    "answer": "Ha, lekin production’da alohida user yaratib, minimal ruxsat berish xavfsizroq hisoblanadi."
+  },
+  {
+    "faq_id": 371,
+    "question": "nega Russian_Kazakhstan bo‘lib turibdi",
+    "answer": "Bu odatda locale yoki language sozlamalariga bog‘liq. Brauzer yoki OS til sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 372,
+    "question": "Postmanda csrf token xato beryapti",
+    "answer": "DRF’da API ishlatayotganda CSRF faqat session auth’da kerak. Token auth yoki `@csrf_exempt` ishlatish mumkin."
+  },
+  {
+    "faq_id": 373,
+    "question": "Live server va web serverni yonma-yon qo‘ya olmayapman",
+    "answer": "Bitta portda faqat bitta server ishlaydi. Turli portlarda ishga tushirish yoki bittasini o‘chirish kerak."
+  },
+  {
+    "faq_id": 374,
+    "question": "xs da element yo‘qolmayapti",
+    "answer": "Bootstrap’da `d-none d-sm-block` kabi utility class’lar yordamida elementni yashirish mumkin."
+  },
+  {
+    "faq_id": 375,
+    "question": "background image qayerdan olsam bo‘ladi",
+    "answer": "Bepul rasmlar uchun unsplash.com, pexels.com va freepik.com saytlari tavsiya etiladi."
+  },
+  {
+    "faq_id": 376,
+    "question": "job application input va label joylashuvi",
+    "answer": "Buning uchun `label` va `input`ni bitta wrapper ichiga olib, CSS’da `position: relative` va `absolute` ishlatiladi."
+  },
+  {
+    "faq_id": 377,
+    "question": "ramkalar va ostidagi yozuvlarni qanday qilish mumkin",
+    "answer": "Bu floating label dizayni deyiladi. CSS’da `:focus` va `transform` bilan amalga oshiriladi."
+  },
+  {
+    "faq_id": 378,
+    "question": "Vazifani tekshirib bervoring",
+    "answer": "Vazifani tekshirish uchun GitHub link yoki screenshot yuborish kerak."
+  },
+  {
+    "faq_id": 379,
+    "question": "302 error image saqlashda",
+    "answer": "302 odatda redirect sababli chiqadi. Form action va method to‘g‘ri berilganini tekshiring."
+  },
+  {
+    "faq_id": 380,
+    "question": "qandaydir muhitga kirolmagan shekilli",
+    "answer": "Virtual environment yoki server muhitiga ulanishda xato bo‘lishi mumkin. Aktiv environment tekshiring."
+  },
+  {
+    "faq_id": 381,
+    "question": "html bo‘yicha mustaqil topshiriqlar qayerdan olsam bo‘ladi",
+    "answer": "Frontend Mentor, W3Schools exercises va FreeCodeCamp saytlari juda qulay."
+  },
+  {
+    "faq_id": 382,
+    "question": "html topshiriqlar uchun sayt bormi",
+    "answer": "Frontendmentor.io va Codepen challangelari tavsiya etiladi."
+  },
+  {
+    "faq_id": 383,
+    "question": "HTTP 405 Method Not Allowed",
+    "answer": "Bu endpoint noto‘g‘ri HTTP method bilan chaqirilganini bildiradi. GET/POST mosligini tekshiring."
+  },
+  {
+    "faq_id": 384,
+    "question": "job application style qilish shartmi",
+    "answer": "Asosiy baholash funksionallikka qaratiladi, lekin minimal dizayn bo‘lishi tavsiya etiladi."
+  },
+  {
+    "faq_id": 385,
+    "question": "return nimani anglatadi",
+    "answer": "`return` funksiya natijasini qaytaradi. Qaytgan qiymatni o‘zgaruvchiga saqlab ko‘rish mumkin."
+  },
+  {
+    "faq_id": 386,
+    "question": "Email kiritganda NumberParseException chiqyapti",
+    "answer": "Email inputni number sifatida parse qilishga urilmoqda. Input type va backend validatsiyani tekshiring."
+  },
+  {
+    "faq_id": 387,
+    "question": "portfolio section ishlamayapti",
+    "answer": "HTML struktura noto‘g‘ri yopilgan va class nomlarida xatolar bor. DOM strukturasini tekshiring."
+  },
+  {
+    "faq_id": 388,
+    "question": "FastAPI yoki DRF qaysi biri ishga kirishda yaxshi",
+    "answer": "DRF bozor talabida kengroq, FastAPI esa tez rivojlanmoqda. Ishga kirish uchun DRF ustunroq."
+  },
+  {
+    "faq_id": 389,
+    "question": "fastapi projectda ModuleNotFoundError app",
+    "answer": "Bu import path muammosi. `PYTHONPATH` yoki `__init__.py` mavjudligini tekshiring."
+  },
+  {
+    "faq_id": 390,
+    "question": "email yoki phone code kelmayapti",
+    "answer": "SMTP yoki SMS service sozlanmagan bo‘lishi mumkin. Test uchun console log ishlatish mumkin."
+  },
+  {
+    "faq_id": 391,
+    "question": "windowsda papka va fayl ochish",
+    "answer": "File Explorer yoki `Win + E` tugmasi orqali papkalarni ochish mumkin."
+  },
+  {
+    "faq_id": 392,
+    "question": "foreign key list chiqarishda IO error",
+    "answer": "Bu N+1 query muammosi bo‘lishi mumkin. `select_related` yoki `prefetch_related` ishlating."
+  },
+  {
+    "faq_id": 393,
+    "question": "CSS kodlar ishlamayapti",
+    "answer": "CSS fayl to‘g‘ri ulanganini va cache muammosi yo‘qligini tekshiring."
+  },
+  {
+    "faq_id": 394,
+    "question": "Job Application UI bir xil bo‘lishi shartmi",
+    "answer": "Yo‘q, lekin dizayn tushunarli va foydalanuvchiga qulay bo‘lishi kerak."
+  },
+  {
+    "faq_id": 395,
+    "question": "pipenv install qilganda xato chiqyapti",
+    "answer": "Python versiyasi yoki PATH sozlamalari muammo bo‘lishi mumkin. `pip install pipenv` ni qayta tekshiring."
+  },
+  {
+    "faq_id": 396,
+    "question": "sariq fonni qilolmayapman",
+    "answer": "Background color yoki gradient noto‘g‘ri berilgan bo‘lishi mumkin. CSS property’larni tekshiring."
+  },
+  {
+    "faq_id": 397,
+    "question": "FastAPI nima va css fonts modul",
+    "answer": "FastAPI backend framework, CSS fonts esa frontend dizayn qismi. Ikkalasi alohida tushunchalar."
+  },
+  {
+    "faq_id": 398,
+    "question": "dropdown itemlar chiqmayapti",
+    "answer": "JavaScript yoki Bootstrap JS ulanmagan bo‘lishi mumkin. Script’lar to‘g‘ri ulanganini tekshiring."
+  },
+  {
+    "faq_id": 399,
+    "question": "kursga to‘lovni qanday qilaman",
+    "answer": "To‘lovni odatda Payme, Click yoki bank orqali amalga oshirish mumkin. Admin tomonidan berilgan yo‘riqnomani tekshiring."
+  },
+  {
+    "faq_id": 400,
+    "question": "requirements.txt versiyalari bilan berilmagan",
+    "answer": "Bu muammo bo‘lishi mumkin. Eng to‘g‘ri yo‘l `pip freeze > requirements.txt` orqali versiyalarni yozib olishdir."
+  },
+  {
+    "faq_id": 401,
+    "question": "option ni ichidagi Please select a month text ni qanaq qilib chiqaz sa bo'ladi disabled degan attribute bor yana qanaq attribute kerak edi?",
+    "answer": "<option> elementini tanlanmas holatda ko‘rsatish uchun `disabled` bilan birga `selected` va `hidden` atributlari ishlatiladi. Masalan: `<option value=\"\" disabled selected hidden>Please select a month</option>`."
+  },
+  {
+    "faq_id": 402,
+    "question": "Css oxirida berilgan amaliy vazifa juda qiyin, faqat css bilan soddaroq qilib yaratsam bo‘ladimi?",
+    "answer": "Ha, mumkin. Amaliy vazifani JS’siz faqat CSS bilan soddalashtirib bajarish ruxsat etiladi. Asosiy maqsad layout va stilni tushunish, murakkab funksiyalar shart emas."
+  },
+  {
+    "faq_id": 403,
+    "question": "Ustoz, o'ta sekin tortyabdiku dasturini?",
+    "answer": "Sekin ishlash sababi kompyuter resurslari, fon dasturlar yoki Live Server kabi plaginlar bo‘lishi mumkin. Keraksiz dasturlarni yopib, brauzer cache’ni tozalab ko‘ring."
+  },
+  {
+    "faq_id": 404,
+    "question": "md va undan kichik breakpointlarda responsive ishlamayapti",
+    "answer": "Bootstrap’da breakpointlar `min-width` asosida ishlaydi. Agar `lg` ishlasa, `md` ishlamasa, CSS override yoki noto‘g‘ri media query yozilgan bo‘lishi mumkin."
+  },
+  {
+    "faq_id": 406,
+    "question": "Djangoda read replica’dan qanday foydalaniladi?",
+    "answer": "Read replica ishlatish uchun `DATABASES` sozlamasida primary va replica bazalar belgilanadi. So‘ng `using()` orqali o‘qish so‘rovlari replica’ga yo‘naltiriladi."
+  },
+  {
+    "faq_id": 407,
+    "question": "Bootstrapdan keyin SASS o‘rganish shartmi?",
+    "answer": "Majburiy emas. SASS CSS’ni qulayroq yozish uchun kerak. Agar CSS’ni yaxshi bilsangiz, keyinroq o‘rganish mumkin."
+  },
+  {
+    "faq_id": 408,
+    "question": "Postmanda ishlayapti, lekin DRF spectacular swagger ishlamayapti",
+    "answer": "Bu ko‘pincha permission yoki authentication sozlamalari sabab chiqadi. `DEFAULT_AUTHENTICATION_CLASSES` va swagger konfiguratsiyasini tekshiring."
+  },
+  {
+    "faq_id": 409,
+    "question": "Websocket so‘rov yuborilganda 500 qaytyapti, redisga ulanishda xato",
+    "answer": "Bu Redis server ishlamayotgani yoki connection string noto‘g‘ri ekanini bildiradi. Redis service ishga tushganini va host/port to‘g‘ri berilganini tekshiring."
+  },
+  {
+    "faq_id": 411,
+    "question": "phonenumbers ishlatilganda email kiritsam xato chiqyapti",
+    "answer": "`phonenumbers` faqat telefon raqam uchun. Email input alohida validatsiyadan o‘tishi kerak, bitta field’da aralashtirib bo‘lmaydi."
+  },
+  {
+    "faq_id": 413,
+    "question": "eval() funksiyasini tushuntirib bera olasizmi?",
+    "answer": "`eval()` string ko‘rinishidagi Python kodni bajaradi. Xavfsizlik sababli real loyihalarda ishlatish tavsiya etilmaydi."
+  },
+  {
+    "faq_id": 416,
+    "question": "age integer field style olmayapti charfield qilaymi?",
+    "answer": "Age uchun `IntegerField` to‘g‘ri tanlov. Style muammosi frontend bilan bog‘liq, backend field turini o‘zgartirish shart emas."
+  },
+  {
+    "faq_id": 417,
+    "question": "telefon va planshetga moslashmayapti",
+    "answer": "Responsive bo‘lishi uchun media query yoki Bootstrap breakpointlardan foydalanish kerak. `meta viewport` mavjudligini ham tekshiring."
+  },
+  {
+    "faq_id": 418,
+    "question": "JS shart operatorlari noto‘g‘ri ishlayapti",
+    "answer": "Shartni string ichida yozib yuborgansiz. `'htmlPassed && cssPassed'` emas, `htmlPassed && cssPassed` bo‘lishi kerak."
+  },
+  {
+    "faq_id": 419,
+    "question": "user modelga bir nechta fayl saqlash yaxshiroq yo‘li qaysi?",
+    "answer": "Eng to‘g‘ri yo‘l — alohida `Document` model ochib, `ForeignKey` bilan `User`ga bog‘lash. Bir field’da ko‘p fayl saqlash tavsiya etilmaydi."
+  },
+  {
+    "faq_id": 420,
+    "question": "pipenv install qildim lekin tekshirsam chiqmayapti",
+    "answer": "Bu PATH muammosi bo‘lishi mumkin. `pipenv --version` bilan tekshiring yoki `python -m pip install pipenv` qilib qayta o‘rnating."
+  },
+  {
+    "faq_id": 421,
+    "question": "Payme key va id ni qayerdan olish kerak?",
+    "answer": "Payme merchant akkaunt ochilgandan keyin shaxsiy kabinet orqali merchant ID va secret key beriladi. Saytdagi demo ma’lumotlar production uchun ishlamaydi."
+  },
+  {
+    "faq_id": 425,
+    "question": "600px da elementlar ustma-ust chiqmayapti",
+    "answer": "Bu responsive breakpoint yoki `flex-direction` noto‘g‘ri berilgani sabab bo‘ladi. Media query’da `flex-direction: column` qo‘llang."
+  },
+  {
+    "faq_id": 426,
+    "question": "basemodeldan field olib tashlasam migratsiyada xato chiqyapti",
+    "answer": "Modeldan field olib tashlanganda eski migratsiyalar bilan ziddiyat bo‘lishi mumkin. Migratsiyalarni qayta ko‘rib chiqing yoki yangi migration yarating."
+  },
+  {
+    "faq_id": 427,
+    "question": "Live Server index.html ga bog‘lanmayapti",
+    "answer": "Live Server faqat ochilgan HTML fayl bilan ishlaydi. To‘g‘ri papkadan `index.html`ni ochganingizni tekshiring."
+  },
+  {
+    "faq_id": 429,
+    "question": "Css ishlamayapti",
+    "answer": "CSS fayl to‘g‘ri ulanganini, path va cache muammosi yo‘qligini tekshiring."
+  },
+  {
+    "faq_id": 430,
+    "question": "while va do while farqi nima?",
+    "answer": "`while` shartni tekshirib keyin ishlaydi, `do while` esa kamida bir marta ishlaydi. Farqi shu."
+  },
+  {
+    "faq_id": 431,
+    "question": "font-family bilan font-style farqi nima?",
+    "answer": "`font-family` shrift turini belgilaydi, `font-style` esa italic yoki normal holatini belgilaydi."
+  },
+  {
+    "faq_id": 433,
+    "question": "if ishlamasa ham else natijasi chiqib ketdi",
+    "answer": "Bu string va o‘zgaruvchi solishtirish xatosi sabab bo‘ladi. `==` va ma’lumot turini tekshiring."
+  },
+  {
+    "faq_id": 436,
+    "question": "python fayllarni D diskka joylash mumkinmi?",
+    "answer": "Ha, mumkin. Disk tanlash dastur ishlashiga ta’sir qilmaydi, faqat path to‘g‘ri bo‘lishi kerak."
+  },
+  {
+    "faq_id": 437,
+    "question": "VS Code commentlar yashil rangda chiqmayapti",
+    "answer": "Bu theme yoki syntax highlighting o‘chirilganidan bo‘lishi mumkin. Theme’ni o‘zgartirib ko‘ring."
+  },
+  {
+    "faq_id": 439,
+    "question": "VS Code mac’da juda ko‘p zaryad yeyayapti",
+    "answer": "Bu extensionlar yoki Live Server sabab bo‘lishi mumkin. Keraksiz extensionlarni o‘chiring."
+  },
+  {
+    "faq_id": 440,
+    "question": "mahsulotlar admin panelda ko‘rinmayapti",
+    "answer": "Model admin’da ro‘yxatdan o‘tkazilmagan bo‘lishi mumkin. `admin.site.register(Model)` ni tekshiring."
+  },
+  {
+    "faq_id": 441,
+    "question": "animatsiya ishlamayapti",
+    "answer": "CSS animation yoki JS trigger noto‘g‘ri bo‘lishi mumkin. Class qo‘shilayotganini tekshiring."
+  },
+  {
+    "faq_id": 450,
+    "question": "product_code va quantity static bo‘lishi kerakmi?",
+    "answer": "Bu real loyihada dynamic bo‘lishi kerak. Static faqat test uchun ishlatiladi."
+  },
+  {
+    "faq_id": 451,
+    "question": "birinchi websiteni yaratish uchun TextEditni yuklagandim lekin yaratoolmayabman boshqa yana qaysi bloknотdan foydalansam bo'ladi",
+    "answer": "VS Code, Sublime Text, yoki Notepad++ ishlatishingizni tavsiya qilaman. Mac da TextEdit ishlatayotgan bo'lsangiz, Format > Make Plain Text qiling. Yoki Atom, Brackets ham yaxshi variantlar."
+  },
+  {
+    "faq_id": 452,
+    "question": "nima uchun saytdagi videolar ko'rsatmayapti",
+    "answer": "Brauzer cache tozalang. Internet tezligini tekshiring. VPN yoqib/o'chirib ko'ring. Boshqa brauzerda sinang. Kurs platformasi support ga murojaat qiling - server muammosi bo'lishi mumkin."
+  },
+  {
+    "faq_id": 453,
+    "question": "Mentorga shaxsiy gapim bor",
+    "answer": "Kurs platformasida mentor bilan bog'lanish bo'limi bo'lishi kerak. Yoki support xizmatiga murojaat qilib mentorga xabar yuborishni so'rang."
+  },
+  {
+    "faq_id": 454,
+    "question": "PostgreSQL qanaqlab o'rnatiladi darsda Mac uchun o'rnatish ko'rsatilgan, Windows uchun shu joyigacha endi nima qilish kerak",
+    "answer": "postgresql.org/download/windows dan installer yuklab oling. Setup ni ishga tushiring, password belgilang. pgAdmin avtomatik o'rnatiladi. Port 5432 default. YouTube da 'PostgreSQL Windows install' qidiring."
+  },
+  {
+    "faq_id": 455,
+    "question": "Nimaga bunday bo'vyapti 20 minutdan beri shunday",
+    "answer": "Aniq muammoni yozing. Qaysi jarayon 20 minut davom etayotganini bildiring. Screenshot yuboring yoki xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 456,
+    "question": "Menda ham shu muammo bo'ldi. O'rnatishlarni YouTube dan ko'rib qilib oldim, lekin dars davomida ustoznikidek ishlamayapti terminal shunga qiyinchilik bo'lyapti.",
+    "answer": "Windows va Mac commandlari farq qiladi. Git Bash o'rnatib Unix commandlarni ishlatishingiz mumkin. Yoki platformada Windows uchun qo'shimcha resurslar so'rang."
+  },
+  {
+    "faq_id": 457,
+    "question": "jadvalar dizayni deganda nimani tushunsa bo'ladi?",
+    "answer": "HTML table elementiga CSS bilan stil berish: border, padding, background-color, text-align. Zebra striping (nth-child), hover effects qo'shish. Responsive qilish."
+  },
+  {
+    "faq_id": 458,
+    "question": "Dars boshida degan faylga ulandi menda bunday fayl yo'q ekan ulanmadi terminalga yozsam, bu papkani qayerga ochsam bo'ladi",
+    "answer": "Terminal da cd Desktop bajaring. Keyin cd project_folder. Windows da: dir (fayllarni ko'rish), cd .. (orqaga), mkdir folder_name (papka yaratish). pwd - hozirgi joyni ko'rsatadi."
+  },
+  {
+    "faq_id": 459,
+    "question": "VS Code da qaysi plugin HTML va CSS elementlarini ranglarda ko'rsatadi?",
+    "answer": "VS Code da default syntax highlighting bor. Qo'shimcha: HTML CSS Support, Auto Rename Tag, Color Highlight, Bracket Pair Colorizer extensionlari."
+  },
+  {
+    "faq_id": 460,
+    "question": "stylesheet, css/main, <!--header section-->ga e'tibor berilsa tartibli har xil ranglarda, aynan shu plugin qaysi plugin?",
+    "answer": "Bu syntax highlighting. Default bor VS Code da. Better Comments extension commentlarni ranglaydi. Material Theme yoki One Dark Pro theme o'rnatishingiz mumkin."
+  },
+  {
+    "faq_id": 461,
+    "question": "template da {% for i in list %} nimaga bunday ishlatilabdi Pythonda {% %} skobkalar yo'qidi tushuntirish ham berib ketmagan o'zing topib ol deganmi",
+    "answer": "{% %} - Django template tags. Python emas, template syntax. {% for %}, {% if %}, {% block %} control structures uchun. {{ }} - o'zgaruvchilarni chiqarish uchun. Django dokumentatsiyasida batafsil."
+  },
+  {
+    "faq_id": 462,
+    "question": "{{ }} bu nima {% %} bu nima",
+    "answer": "Django/Jinja2 template syntax: {{ variable }} - o'zgaruvchi chiqarish, {% tag %} - control structures (for, if, block). {% for i in items %} {{ i }} {% endfor %} misol."
+  },
+  {
+    "faq_id": 463,
+    "question": "Mana shuni ko'rib beringlar Roboto fontini transfonter orqali 4 ta formatga (ttf, eot, woff, woff2) formatga o'tkazdim. Lekin shunda ham brauzerim Roboto fontini ko'rsatmasdan Times New Roman fontini ko'rsatyapti",
+    "answer": "@font-face src da to'g'ri yo'l ko'rsatilganini tekshiring. font-family nomi CSS da to'g'ri yozilganini tasdiqlang. Brauzer console da font yuklanganini tekshiring. Google Fonts dan to'g'ridan-to'g'ri ishlatib ko'ring."
+  },
+  {
+    "faq_id": 464,
+    "question": "Natija darsdagidek bo'lmayapti",
+    "answer": "Kod va natija screenshot ini yuboring. Qaysi qismi farq qilayotganini aniq ko'rsating. Brauzer developer tools bilan CSS tekshiring."
+  },
+  {
+    "faq_id": 465,
+    "question": "JS modulining so'ngi amaliy vazifasini tushuntirib bering. Biz IP addressni brauzerda kiritamiz va natija ham brauzerda chiqishi kerak mi Yoki JS faylga ma'lumot kiritib natijani consoleda chiqaramizmi?",
+    "answer": "Vazifa talabiga qarab. Odatda brauzerda input field orqali IP kiritiladi va natija HTML da ko'rsatiladi. Console faqat debugging uchun. fetch() bilan API dan ma'lumot olib DOM ga chiqaring."
+  },
+  {
+    "faq_id": 466,
+    "question": "PostgreSQL o'rnatayotganimda shu xatolik chiqayapti qanday to'g'irlasam bo'ladi",
+    "answer": "Xato xabarini ko'rsating. Odatda port 5432 band bo'lishi yoki admin huquqi kerakligi mumkin. Installer ni 'Run as administrator' qiling. Antivirus bloklayotgan bo'lishi mumkin."
+  },
+  {
+    "faq_id": 467,
+    "question": "mana shu savolga qaysi bo'ladi",
+    "answer": "Qaysi savol haqida gapirayotganingizni aniq yozing. Savol matnini yuboring."
+  },
+  {
+    "faq_id": 468,
+    "question": "nega bunday har xil til bo'lib chiqyapti nimaga",
+    "answer": "Til sozlamalarini tekshiring. Django da LANGUAGE_CODE va LANGUAGES settings ni ko'ring. Brauzer tilini o'zgartiring. i18n/l10n sozlamalari to'g'riligini tasdiqlang."
+  },
+  {
+    "faq_id": 469,
+    "question": "Sahifaga kirganda login & signup o'rniga logout turibdi, hali login qilmasdan turib logout turibdi, shularni to'g'irlashga yordam bering",
+    "answer": "Template da {% if user.is_authenticated %} condition qo'shing. Login bo'lganlar uchun logout, logout bo'lganlar uchun login/signup ko'rsating. Context da user object borligini tekshiring."
+  },
+  {
+    "faq_id": 470,
+    "question": "DRFda kutubxona loyihasi railwayapp ga deploy qilingan ekan. Hozir ham ishlayaptimi yaqinda bot qo'ymoqchi bo'lganimda ishlamagandi",
+    "answer": "Railway free tier cheklangan. Deploy qilgan loyihalar sleep mode ga o'tishi mumkin. Railway dashboard dan project statusini tekshiring. Render, PythonAnywhere alternativa."
+  },
+  {
+    "faq_id": 471,
+    "question": "aria-hidden=\"true\" nimaga ishlatiladi?",
+    "answer": "Accessibility uchun. Screen readerlar o'sha elementni o'qimaydi. Dekorativ elementlar (ikonkalar) uchun ishlatiladi. SEO va accessibility yaxshilaydi."
+  },
+  {
+    "faq_id": 472,
+    "question": "Assalomu alaykum yonidagi filter manda chiqmayapti huddi shunday qilib code yozdim, ammo menda filter ishlamayapti nega yordam bera olasizmi?",
+    "answer": "django-filter o'rnatilganini tekshiring. INSTALLED_APPS ga qo'shilganini tasdiqlang. FilterSet to'g'ri yozilganini va view da ishlatilganini ko'ring. Template da form render qilganingizni tekshiring."
+  },
+  {
+    "faq_id": 473,
+    "question": "Assalomu aleykum Django asoslari (arxiv) bilan muammo bo'lyapdi",
+    "answer": "Aniq muammoni yozing. Qaysi xato yuz berayotganini yoki qaysi qismi tushunarsiz ekanligini bildiring."
+  },
+  {
+    "faq_id": 474,
+    "question": "QuerySet bilan model manager vazifasi?",
+    "answer": "Manager - database dan ma'lumot olish interfeysi (Model.objects). QuerySet - filter qilingan natijalar to'plami. Manager QuerySet qaytaradi. Custom manager yozib default xatti-harakatni o'zgartirish mumkin."
+  },
+  {
+    "faq_id": 475,
+    "question": "Darsliklarga yangilik kiritish kerak ayniqsa Django modullariga, eng kerakli yangilik macOS ni Windowsga almashtirish. Django moduli deyarli boshlanishi bilan chalkash bo'lib ketdi",
+    "answer": "Feedback uchun rahmat. Kurs platformasi support ga murojaat qilib Windows uchun qo'shimcha materiallar so'rang. Git Bash o'rnatib Unix commandlarni Windows da ishlating. Komanda farqlari uchun cheat sheet yarating."
+  },
+  {
+    "faq_id": 476,
+    "question": "urldagi cursor paginationmi",
+    "answer": "Ha, DRF da CursorPagination URL da cursor parametri bilan ishlaydi. PageNumberPagination esa page parametri ishlatadi. settings.py da DEFAULT_PAGINATION_CLASS sozlang."
+  },
+  {
+    "faq_id": 477,
+    "question": "Assalomu alaykum. CSS bo'limidagi shu portfolio rasmlar joylashtirishda muammo bo'lyapti. Rasmlarni videodarsda display-relative va absolute bilan foydalanib joylashtirgandilar. Men ham shunday joylashtirdim. Lekin buni kamchiligi responsive emas.",
+    "answer": "Absolute positioning responsive emas. Flexbox yoki Grid ishlatishni tavsiya qilaman. Media queries bilan har xil ekran uchun sozlang. object-fit: cover; rasmlar uchun yaxshi. position: absolute ni imkon qadar kamaytiring."
+  },
+  {
+    "faq_id": 478,
+    "question": "menda VS Code da shunday muammo bo'lib yozgan kodim run bo'lmayapti",
+    "answer": "Qaysi til? HTML uchun Live Server kerak. Python uchun interpreter tanlang. Terminal da to'g'ridan-to'g'ri python file.py yoki node file.js bajaring. Xato xabarini ko'rsating."
+  },
+  {
+    "faq_id": 479,
+    "question": "Assalomu alaykum. Loyihani o'rtasida User modelini CustomUserga almashtiridim, drop database va create database qildim, migratsiya fayllarini tozaladi. ammo mana bu xatolikni oldim",
+    "answer": "AUTH_USER_MODEL = 'app.CustomUser' settings.py da to'g'ri sozlang. Barcha ForeignKey(User) ni settings.AUTH_USER_MODEL ga o'zgartiring. Database va migratsiyalarni to'liq tozalab, qayta boshlang."
+  },
+  {
+    "faq_id": 480,
+    "question": "Django render deploy qildim logda xatolik yo'q. admin/ ishlayapti accounts app urllari ishlayapti posts app urllari ishlamayapti Server Error (500) qaytarypti. bunda modeltranslation bor.",
+    "answer": "DEBUG=True qilib aniq xatoni ko'ring. Render logs ni to'liq o'qing. modeltranslation migration qilinganini tekshiring. ALLOWED_HOSTS to'g'ri sozlanganini tasdiqlang. Static files collectstatic qilinganini ko'ring."
+  },
+  {
+    "faq_id": 481,
+    "question": "qaysi terminallarni ishlatish kerak. menda uchta 4 ta terminal ishlata olmayabman. Windows terminal ishlatsam xatolik berayabdi celery orqali so'rovni cmd da qildim.",
+    "answer": "Har bir service uchun alohida terminal: 1) Django server 2) Celery worker 3) Celery beat 4) Redis/RabbitMQ. PowerShell yoki CMD ikkalasi ham ishlaydi. Virtual environment activate qilinganini tekshiring."
+  },
+  {
+    "faq_id": 482,
+    "question": "Assalomu alaykum! Amaliy vazifani zip hajmi 5 mbdan katta bo'lib ketyapti. ZIP o'rniga vazifani GitHub manzilini yuborsam ham bo'ladimi?",
+    "answer": "Ha, GitHub link yuborsangiz bo'ladi. node_modules, venv, __pycache__, .git papkalarini zip ga qo'shmang. .gitignore to'g'ri sozlang. README.md ga setup instructions yozing."
+  },
+  {
+    "faq_id": 483,
+    "question": "Va aleykum assalom! Tushunarli rahmat! Saytda vazifamni yuklab bo'lmayapti, Yuklanmoqda degan yozuv turibdi holos. mb kichraytirdim.",
+    "answer": "Brauzer cache tozalang. Boshqa brauzerda sinab ko'ring. Internet connection tekshiring. Platformada fayl hajmi cheklovi borligini tekshiring. Support ga murojaat qiling."
+  },
+  {
+    "faq_id": 484,
+    "question": "9-darsdaman. 422 xatolik chiqyapti, 201 chiqishi kerak edi to'g'rirolmayapman",
+    "answer": "422 - validation error. Request body to'g'ri formatda ekanligini tekshiring. Required fields to'ldirilganini tasdiqlang. Postman/Thunder Client da request body ni tekshiring. Backend validation logini o'qing."
+  },
+  {
+    "faq_id": 485,
+    "question": "YouTube kanaliga joylangan telegram bot yaratish darsi bilan platformadagi pulli bot yaratish darsini farqi nimada?",
+    "answer": "Pulli kursda chuqurroq, project-based o'rgatiladi. Mentor support bor. Advanced features, best practices, deploy. YouTube asosiy tushunchalar. Sertifikat va vazifalar tekshiriladi."
+  },
+  {
+    "faq_id": 486,
+    "question": "fastapi-jwt-auth, pydantic, fastapi ning oxirgi versiyalari, eski versiyalari bilan ham ishlamadi.",
+    "answer": "fastapi-jwt-auth deprecated. python-jose yoki fastapi-users ishlatishni tavsiya qilaman. requirements.txt da exact versiyalarni yozing. Virtual environment qayta yaratib ko'ring."
+  },
+  {
+    "faq_id": 487,
+    "question": "Kodni tekshirib bering iloji bo'lsa (Manga qosа umuman tekshirmasangiz ham mayli. Ma'suliyatsizlik qilayotganla alam qilyapti faqat!)",
+    "answer": "Kod va muammoni aniq yozing. Screenshot yoki GitHub link yuboring. Qaysi qismi ishlamayotganini ko'rsating."
+  },
+  {
+    "faq_id": 488,
+    "question": "CSS 6chi dars Specificity darsidan savolim bor edi. agar bitta elementga ham class ham attributiga stil berilsa qaysi biri ustunroq bo'ladi? yana bitta savol qaysi stil berish turi ustunroq inline-internal-external?",
+    "answer": "Specificity: inline > ID > class > element. Class va attribute bir xil (0,0,1,0). Inline > internal/external. !important eng kuchli lekin kamaytiring. MDN Specificity calculator ishlatib ko'ring."
+  },
+  {
+    "faq_id": 489,
+    "question": "men drf_yasg ni o'rnatdim lekin import qilayotkanimda ko'rinmayapti yordam bering",
+    "answer": "pip list bilan o'rnatilganini tekshiring. INSTALLED_APPS ga 'drf_yasg' qo'shing. Virtual environment to'g'ri activate qilinganini tasdiqlang. IDE ni restart qiling."
+  },
+  {
+    "faq_id": 490,
+    "question": "Shu mavzuni bajaryotgan edim saytda yulduzcha iconkasini chiqmayabdi kodni to'g'ri yozdim qayerda xato borligini topolmayapman",
+    "answer": "Font Awesome yoki icon library to'g'ri ulanganini tekshiring. CDN link ishlayotganini tasdiqlang. Class nomi to'g'ri yozilganini ko'ring: <i class='fas fa-star'></i>. CSS content property to'g'riligini tekshiring."
+  },
+  {
+    "faq_id": 491,
+    "question": "Assalomu aleykum faqat chap tarafdagi shularni yaratsa yetarlimi Elements, basic Forms, Form elements Table, Bootstrap table",
+    "answer": "Vazifa talablariga qarab. Agar faqat shu componentlar talab qilingan bo'lsa, yetarli. To'liq talablarni o'qing, kerakli barcha qismlarni bajaring."
+  },
+  {
+    "faq_id": 492,
+    "question": "Job applicationni qanday yuklaymiz? Shunga yordam berib yuboring.",
+    "answer": "HTML fayllarni zip arxiv qilib yuklang. Yoki GitHub repo linki yuboring. Platformada 'Vazifani yuklash' yoki 'Submit' tugmasi bo'lishi kerak. Fayllar: index.html, style.css, images/ papka."
+  },
+  {
+    "faq_id": 493,
+    "question": "Yordam kerak edi lichkaga yozvorin iltimos",
+    "answer": "Guruhda savol yozing, hammaga foydali bo'ladi. Shaxsiy murojaat uchun kurs platformasidagi support xizmatiga murojaat qiling."
+  },
+  {
+    "faq_id": 494,
+    "question": "mana bu savolga tushunmadimda. images papkasi bitta CSS kod bilan joyda joylashganmi yoki bitta papka tashqaridami aytilmaganku tushuntira olasizmi?",
+    "answer": "Odatda: project/ -> index.html, css/style.css, images/. Relative path: <img src='images/photo.jpg'>. CSS ichida: background-image: url('../images/photo.jpg'). Bir joyda bo'lsa: src='photo.jpg'."
+  },
+  {
+    "faq_id": 495,
+    "question": "Assalomu alaykum CSS darslaridan keyin faqat test yechyapman Amaliy mashg'ulot uchun biror manba bormi? yoxud darsni mustahkamlash uchun qanday ishlarni qilishni maslahat berasiz?",
+    "answer": "frontendmentor.io, cssbattle.dev da mashqlar qiling. Mavjud saytlarni copy qilib mashq qiling. Kichik loyihalar: landing page, portfolio, blog layout. YouTube tutorials bajaring."
+  },
+  {
+    "faq_id": 496,
+    "question": "Ahost da domain sotib olgandan keyin qancha vaqtdan keyin domain ishlaydi?",
+    "answer": "DNS propagatsiya 24-48 soat olishi mumkin. Lekin ko'pincha 2-4 soatda ishlaydi. whois.net da domain statusini tekshiring. nameserverlar to'g'ri sozlanganini tasdiqlang."
+  },
+  {
+    "faq_id": 497,
+    "question": "Assalomu alaykum, menda ushbu sectionda backgrounddagi sariq to'lqinni pastki qismi tekis bo'lib qolmoqda pastini ham to'lqin holatda qilish uchun nima qilish kerak?",
+    "answer": "SVG wave generator: getwaves.io, shapedivider.app ishlatib pastki qism uchun ham wave SVG oling. Yoki CSS clip-path bilan: clip-path: polygon(). Border-radius bilan ham oddiy to'lqin yasash mumkin."
+  },
+  {
+    "faq_id": 498,
+    "question": "menikini tezroq ko'rib bering, kamida 4-5 soat qildim, shuni, meni telefonim Redmi 14, ochmadi, CSS fayl bilan, noutbukda ochilyapti",
+    "answer": "Telefonda cache tozalang. Mobile responsive media queries yozilganini tekshiring. Viewport meta tag bor ekanligini tasdiqlang. CSS file path to'g'riligini tekshiring. Telefon brauzerda console xatolarni ko'ring."
+  },
+  {
+    "faq_id": 499,
+    "question": "3D transformlar to'liqroq batafsil tushuntirilgan biror video bormi? kursdagi videoga unchalik tushunmadimda",
+    "answer": "YouTube: 'CSS 3D transforms tutorial', 'CSS perspective explained' qidiring. MDN Web Docs da batafsil dokumentatsiya bor. Kevin Powell, Web Dev Simplified kanallari yaxshi tushuntiradi."
+  },
+  {
+    "faq_id": 500,
+    "question": "15K 12K lar yonma yon turishi uchun nimalarni o'zgartirish kerak?",
+    "answer": "display: flex; yoki display: inline-block; qo'shing parent container ga. Flexbox: flex-direction: row; gap: 20px;. Float: float: left; margin-right: 20px;. Grid: display: grid; grid-template-columns: auto auto;"
+  },
+  {
+    "faq_id": 501,
+    "question": "Neftlifyda qildim faqat rasm yuklamadi, githubda image fayl ichiga kirib rasm yukladim yuklandi, ammo neftlifyda ko‘rsatmayapti",
+    "answer": "Netlify’da rasm chiqmasligiga ko‘pincha path muammosi sabab bo‘ladi. CSS’da rasmga nisbiy yo‘l (`../images/img.png`) noto‘g‘ri berilgan bo‘lishi mumkin. GitHub’da rasm borligini va path’lar kichik-katta harf bilan to‘g‘ri yozilganini tekshiring."
+  },
+  {
+    "faq_id": 503,
+    "question": "Superuser passwordim esimdan chiqib ketibdi, qanday yangilasam bo‘ladi?",
+    "answer": "Django’da superuser parolini yangilash uchun terminalda `python manage.py changepassword username` buyrug‘idan foydalaning."
+  },
+  {
+    "faq_id": 505,
+    "question": "sliding animation nima va qanday yasaladi?",
+    "answer": "Sliding animation — elementning yon tomondan siljib chiqish animatsiyasi. CSS’da `transform: translateX()` va `transition` yoki `@keyframes` yordamida qilinadi."
+  },
+  {
+    "faq_id": 506,
+    "question": "Bootstrap amaliy ishda faqat navbar va bir nechta sahifa qilish kifoyami?",
+    "answer": "Ha, amaliy ishda asosiy e’tibor layout va navigation’ga qaratiladi. Barcha sahifalar to‘liq kontent bilan to‘ldirilishi shart emas."
+  },
+  {
+    "faq_id": 507,
+    "question": "HTML loyihani yuborganman lekin 50 soat bo‘ldi javob kelmadi",
+    "answer": "Loyihalar navbat asosida tekshiriladi. Ba’zi paytlarda tekshiruv vaqti cho‘zilishi mumkin, iltimos biroz kuting."
+  },
+  {
+    "faq_id": 508,
+    "question": "nega logo hali ham block element bo‘lib turibdi?",
+    "answer": "Rasm (`img`) default holatda inline element. Agar block bo‘lib turgan bo‘lsa, CSS’da `display: block` berilgan bo‘lishi mumkin. `display: inline-block` qilib ko‘ring."
+  },
+  {
+    "faq_id": 510,
+    "question": "Crispy forms create va edit formalarni qanday ajratadi?",
+    "answer": "Crispy forms form class’ga qarab ishlaydi. Create va update uchun alohida form class yoki view’dagi context orqali farqlanadi, fayl nomiga qarab emas."
+  },
+  {
+    "faq_id": 512,
+    "question": "Darslikdagi loyihalar havolalari bo‘lsa yaxshi bo‘lardi",
+    "answer": "Bu taklif inobatga olinadi. Loyihalarni GitHub yoki demo havolalar orqali ko‘rsatish o‘rganishni yanada osonlashtiradi."
+  },
+  {
+    "faq_id": 513,
+    "question": "Spyder o‘rniga VS Code ishlatsa bo‘ladimi?",
+    "answer": "Ha, bo‘ladi. VS Code ko‘proq imkoniyatlarga ega va Python, frontend hamda backend uchun qulay."
+  },
+  {
+    "faq_id": 514,
+    "question": "Fullstack pythonda telegram bot o‘rgatiladimi?",
+    "answer": "Ha, kurs davomida Telegram botlar yaratish asoslari o‘rgatiladi."
+  },
+  {
+    "faq_id": 515,
+    "question": "flexboxda width bilan flex-basis farqi nima?",
+    "answer": "`width` elementning oddiy kengligini belgilaydi, `flex-basis` esa flex container ichida elementning boshlang‘ich o‘lchamini belgilaydi."
+  },
+  {
+    "faq_id": 517,
+    "question": "media queryni mobile first yoki desktop firstdan boshlash yaxshimi?",
+    "answer": "Zamonaviy yondashuv — mobile first. Avval kichik ekranlar uchun yozilib, keyin katta ekranlarga moslashtiriladi."
+  },
+  {
+    "faq_id": 518,
+    "question": "login ishlayapti logout ishlamayapti",
+    "answer": "Logout muammosi ko‘pincha URL yoki method noto‘g‘ri bo‘lganda chiqadi. `POST` yoki `GET` mosligini va session tozalanayotganini tekshiring."
+  },
+  {
+    "faq_id": 519,
+    "question": "Command Prompt va PowerShell’da Django va pipenv buyruqlari ishlamayapti",
+    "answer": "Bu PATH muammosi bo‘lishi mumkin. Python va pipenv to‘g‘ri o‘rnatilganini hamda environment aktiv ekanini tekshiring."
+  },
+  {
+    "faq_id": 520,
+    "question": "CSS sliding animation scroll bilan ishlamayapti",
+    "answer": "Scroll bilan ishlashi uchun JavaScript kerak bo‘ladi. Faqat CSS refresh paytida ishlaydi, scroll trigger JS orqali amalga oshiriladi."
+  },
+  {
+    "faq_id": 521,
+    "question": "Junior python backend bo‘lish uchun Django va DRF yetarlimi?",
+    "answer": "Ha, Django va DRF junior backendchi uchun yetarli. Keyinroq FastAPI va async mavzularni o‘rganish mumkin."
+  },
+  {
+    "faq_id": 522,
+    "question": "JS gacha tugatdim, bilimni mustahkamlash uchun saytlar bormi?",
+    "answer": "FreeCodeCamp, Frontend Mentor va Codewars bilimni mustahkamlash uchun juda foydali."
+  },
+  {
+    "faq_id": 523,
+    "question": "Instagram loyihasi juda murakkab, nega shunday berilgan?",
+    "answer": "Bu loyiha o‘sish uchun mo‘ljallangan. Hammasini to‘liq tushunish shart emas, asosiy logikani tushunish yetarli."
+  },
+  {
+    "faq_id": 525,
+    "question": "JetBrains saytidan qaysi ilovani yuklash tavsiya etiladi?",
+    "answer": "Python uchun PyCharm, frontend va umumiy ishlar uchun IntelliJ IDEA tavsiya etiladi."
+  },
+  {
+    "faq_id": 526,
+    "question": "Yangi Django darslaridan boshlasam bo‘ladimi?",
+    "answer": "Ha, bo‘ladi. Ammo asosiy tushunchalarni bilish tavsiya etiladi."
+  },
+  {
+    "faq_id": 527,
+    "question": "Background yig‘ilib ketayapti qanday tuzatish mumkin?",
+    "answer": "`background-repeat`, `background-size: cover` va `background-position` sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 531,
+    "question": "Herokudan boshqa serverlarga ham yuklasa bo‘ladimi?",
+    "answer": "Ha, Render, Railway, DigitalOcean va VPS serverlarga yuklash mumkin."
+  },
+  {
+    "faq_id": 532,
+    "question": "Platformaga loyiha yuklashda karta ulash so‘rayapti",
+    "answer": "Ba’zi servislar deploy uchun karta talab qiladi. Bepul alternativalar sifatida Railway yoki Render’dan foydalanish mumkin."
+  },
+  {
+    "faq_id": 533,
+    "question": "JetBrains kuponini 2 ta kompyuterda ishlatsa bo‘ladimi?",
+    "answer": "Ha, bitta email bilan bir nechta qurilmada foydalanish mumkin."
+  },
+  {
+    "faq_id": 534,
+    "question": "Tasdiqlash kodini Redis’da saqlash yaxshimi?",
+    "answer": "Ha, tasdiqlash kodlarini Redis’da saqlash tez va vaqtinchalik ma’lumotlar uchun eng to‘g‘ri yechim."
+  },
+  {
+    "faq_id": 535,
+    "question": "Signal ishlatish yaxshimi yoki model save’ni override qilish?",
+    "answer": "Signal qulay, lekin noto‘g‘ri ishlatilsa murakkablashadi. Oddiy holatlarda `save()` override qilish yetarli va aniqroq."
+  },
+  {
+    "faq_id": 536,
+    "question": "Django blog loyihasi uchun qaysi DB ishlatsam bo‘ladi?",
+    "answer": "Kichik loyiha uchun SQLite, production uchun PostgreSQL tavsiya etiladi."
+  },
+  {
+    "faq_id": 538,
+    "question": "telebot ishlamayapti nima qilish kerak",
+    "answer": "Telebot ishlamasa, modul o‘rnatilganini (`pip install pyTelegramBotAPI`) va token to‘g‘ri ekanini tekshiring."
+  },
+  {
+    "faq_id": 541,
+    "question": "return o‘rniga print yozganim uchun xato bo‘ldimi?",
+    "answer": "Ha, `print` faqat chiqaradi, `return` esa qiymat qaytaradi. Funksiya natijasini olish uchun `return` ishlatiladi."
+  },
+  {
+    "faq_id": 543,
+    "question": "Fullstackda HTML va CSS qanchalik muhim?",
+    "answer": "HTML va CSS juda muhim. AI yordamchi bo‘lsa ham, asoslarini bilmasdan yaxshi frontend qilish qiyin."
+  },
+  {
+    "faq_id": 544,
+    "question": "static fayllar serverda to‘liq chiqmayapti",
+    "answer": "Production’da `collectstatic` qilinmagan bo‘lishi mumkin. Static path va server sozlamalarini tekshiring."
+  },
+  {
+    "faq_id": 545,
+    "question": "Environment variables dasturi yo‘q ekan",
+    "answer": "Environment variables qo‘lda yoki `.env` fayl orqali sozlanadi. Maxsus dastur shart emas."
+  },
+  {
+    "faq_id": 546,
+    "question": "psql terminalda tanilmayapti",
+    "answer": "PostgreSQL to‘liq o‘rnatilmagan yoki PATH qo‘shilmagan. PostgreSQL bin papkasini PATH’ga qo‘shing."
+  },
+  {
+    "faq_id": 547,
+    "question": "Monitoring API GET metodida qanday ma’lumot chiqishi kerak?",
+    "answer": "Monitoring endpoint’da server holati, requestlar soni, xatolar va ishlash vaqti kabi statistikalar chiqishi mumkin."
+  }
+]
